@@ -52,3 +52,5 @@ owl.on('mousewheel', '.owl-stage', function (e) {
 刪除git資料夾：
 Remove-Item -Recurse -Force .git
 </p>
+
+https://www.flaticon.com/free-sticker/tourist_11482694?term=travel&page=1&position=9&origin=search&related_id=11482694
