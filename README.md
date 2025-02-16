@@ -20,7 +20,35 @@ top:做一個手機版logo
     1. 發掘台灣之美，為旅人打造專屬體驗
     2. 旅行不只是打卡——Liate，帶你發現大自然的美麗
     3. 你的旅遊靈感補給站——Liate，為探索而生
-    
+#mousewheel
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    nav:true,
+    margin:10,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },            
+        960:{
+            items:5
+        },
+        1200:{
+            items:6
+        }
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});    
 刪除git資料夾：
 Remove-Item -Recurse -Force .git
 </p>
