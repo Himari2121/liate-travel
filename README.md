@@ -1,7 +1,7 @@
 # liate-travel
 <p>
 做一個漢堡選單會員
-關於我們（about)、景點一覽（spot)、山海漫遊、旅遊體驗、相關資訊
+關於我們（about)、景點一覽（spot-list)、山海漫遊(tour-guide)、旅遊體驗(experience)、相關資訊(information)
 1、輪播圖換另一個頁面的
 2、主要內容：
     1.活動公告：
