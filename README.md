@@ -1,6 +1,7 @@
 # liate-travel
 <p>
 做一個漢堡選單會員
+關於我們（about)、景點一覽（spot)、山海漫遊、
 1、輪播圖換另一個頁面的
 2、主要內容：
     1.活動公告：
@@ -16,7 +17,7 @@
     中：高美濕地
     南：阿里山國家森林遊樂園區、台南鹽水
     東：頭城、華源海濱公園
-我們是誰：
+關於我們：
     1. 發掘台灣之美，為旅人打造專屬體驗
     2. 旅行不只是打卡——Liate，帶你發現大自然的美麗
     3. 你的旅遊靈感補給站——Liate，為探索而生
@@ -52,5 +53,4 @@ owl.on('mousewheel', '.owl-stage', function (e) {
 刪除git資料夾：
 Remove-Item -Recurse -Force .git
 </p>
-
 https://www.flaticon.com/free-sticker/tourist_11482694?term=travel&page=1&position=9&origin=search&related_id=11482694
