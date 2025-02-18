@@ -1,4 +1,6 @@
 # liate-travel
+會員登入失敗提示
+訪客跟會員
 <p>
 做一個漢堡選單會員
 關於我們（about)、景點一覽（spot-list)、山海漫遊(tour-guide)、旅遊體驗(experience)、相關資訊(information)
