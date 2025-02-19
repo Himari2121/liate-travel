@@ -56,3 +56,60 @@ owl.on('mousewheel', '.owl-stage', function (e) {
 Remove-Item -Recurse -Force .git
 </p>
 https://www.flaticon.com/free-sticker/tourist_11482694?term=travel&page=1&position=9&origin=search&related_id=11482694
+主選單更改
+<!-- 主選單 修改會員-->
+    <nav class="navbar navbar-expand-xl shadow-sm position-sticky top-0 end-0 z-3 start-0 bg-blue">
+        <div class="container-lg position-relative">
+            <!-- 會員Logo -->
+            <h1 class="navbar-brand col-xl-3 col-lg-9 col-md-8 px-xl-3 me-0 mb-0">
+                <a class="navbar-brand  me-0" href="index.html" title="前往首頁">
+                    <!-- 平板以上 -->
+                    <img class="d-md-inline-block d-none" src="img/logo_rename.png" alt="莉艾特山海漫遊 Logo">
+                    <!-- 手機板 -->
+                    <img class="d-md-none d-inline-block" src="img/logo_md.svg" alt="莉艾特山海漫遊 Logo">
+                    <span class="d-none">莉艾特山海漫遊</span> <!--xl 1200以上--->
+                </a>
+            </h1>
+            <!-- 漢堡選單 -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 連結 -->
+            <div class="collapse navbar-collapse flex-fill justify-content-md-center  top-100 start-0 end-0 end-0 bg-blue py-lg-0 py-5"
+                id="main-menu">
+                <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#information" title="前往 相關資訊">公告資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tourist-hotspots" title="前往 山海熱點">山海熱點</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#apply" title="前往 線上申請">線上申請</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" title="前往 關於我們">關於我們</a>
+                    </li>
+                    <!-- 會員 (僅手機和平板顯示) -->
+                    <li class="nav-item d-xl-none">
+                        <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="nav-link">
+                            <i class="bi bi-person-heart"></i>
+                            <span>會員登入</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 會員(僅電腦版顯示) -->
+            <div class="d-none d-xl-flex align-items-center ms-auto text-decoration-none text-gr">
+                <i class="bi bi-person-heart"></i>
+                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="d-md-inline-block d-none text-gr">會員登入</span>
+                </a>
+            </div>
+        </div>
+    </nav>
