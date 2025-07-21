@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莉艾特山海漫遊</title>
+    <!-- icon -->
+    <link rel="icon" href="img/logo.svg">
+    <!-- css -->
+    <link rel="stylesheet" href="bs-533/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/icons-1.11.3/font/bootstrap-icons.css">
+    <!-- 頁面動態 -->
+    <link rel="stylesheet" href="js/WOW-master/css/libs/animate.css">
+    <!-- 進度條 -->
+    <link rel="stylesheet" href="js/LineProgressbar-master/jquery.lineProgressbar.css">
+    <!-- 燈箱效果 -->
+    <link rel="stylesheet" href="js/ui-main/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+    <!-- Top link -->
+    <div class="bg-light py-1 border-bottom border-1 border-brown">
+        <div class="container">
+            <!-- 語系、背景音樂-->
+            <div class="d-flex align-items-center justify-content-center">
+                <!-- 聯絡資訊 -->
+                <div>
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- Designer:Himari -->
+                        <li class="me-2">
+                            <a class="text-bk1" href="mailto:a12@gmail.com.tw" title="Designer:Himari">
+                                <i class="bi bi-suitcase-lg-fill"></i>
+                                <span class="d-md-inline-block d-none">Designer:Himari</span>
+                            </a>
+                        </li>
+                        <!-- 電話 -->
+                        <li>
+                            <a class="text-bk1" href="tel:+886 926-222-666" title="客服專線:+886 926-222-666">
+                                <i class="bi bi-phone-vibrate"></i>
+                                <span class="d-md-inline-block d-none">+886 926-222-666</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 語系、背景音樂 靠右 -->
+                <div class="ms-auto">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- 語系 -->
+                        <li class="me-2">
+                            <div class="dropdown lang-menu">
+                                <button class="btn dropdown-toggle p-0 " type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="true">
+                                    <i class="bi bi-translate text-brown"></i>
+                                    <span>Language</span>
+                                </button>
+                                <ul class="dropdown-menu text-center w-auto">
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="繁體中文">中文</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="日本語">日本語</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="英語">English</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <span class="px-3">|</span>
+                        <!-- 播放音樂按鈕 -->
+                        <li class="me-2">
+                            <div>
+                                <a class="text-brown" href="#" title="點擊背景音樂" onclick="playMusic()">
+                                    <i class="bi bi-music-player-fill"></i>
+                                    <span>背景音樂</span>
+                                    <i id="stopIcon" class="bi bi-stop-circle" style="display: none;"></i>
+                                    <i id="playIcon" class="bi bi-play-circle"></i>
+                                </a>
+                            </div>
+                            <!-- 音樂播放器 -->
+                            <audio id="background-music" loop>
+                                <source src="music/barradeen-bedtime-after-a-coffee(chosic.com).mp3" type="audio/mp3">
+                                您的瀏覽器不支援 HTML5 音樂播放。
+                            </audio>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主選單 -->
+    <nav class="navbar navbar-expand-xl shadow-sm position-sticky top-0 end-0 z-3 start-0 bg-logo-beige">
+        <div class="container-lg position-relative">
+            <!-- 會員Logo -->
+            <h1 class="navbar-brand col-xl-3 col-lg-9 col-md-8 px-xl-3 me-0 mb-0">
+                <a class="navbar-brand  me-0" href="index.html" title="前往首頁">
+                    <!-- 平板以上 -->
+                    <img class="d-md-inline-block d-none" src="img/logo_rename.png" alt="莉艾特山海漫遊 Logo">
+                    <!-- 手機板 -->
+                    <img class="d-md-none d-inline-block" src="img/logo_md.svg" alt="莉艾特山海漫遊 Logo">
+                    <span class="d-none">莉艾特山海漫遊</span> <!--xl 1200以上--->
+                </a>
+            </h1>
+            <!-- 漢堡選單 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#DropdownMenu"
+                aria-controls="DropdownMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 連結 -->
+            <div class="collapse navbar-collapse justify-content-center bg-logo-beige" id="DropdownMenu">
+                <ul class="navbar-nav mb-2 mb-lg-0 z-3 justify-content-between col-12 col-lg-10 text-center">
+                    <!-- 會員 (僅手機和平板顯示) -->
+                    <li class="nav-item d-xl-none br-list">
+                        <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="nav-link btn">
+                            <i class="bi bi-person-circle"></i>
+                            <span>會員登入</span>
+                        </a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link " href="index.html#information" title="前往 相關資訊">公告資訊</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="index.html#tour-guide" title="前往 山海漫遊">山海漫遊</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="apply.html" title="前往 線上申請">線上申請</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about" title="前往 關於我們">關於我們</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 會員(僅電腦版顯示) -->
+            <div class="d-none d-xl-flex align-items-center ms-auto text-decoration-none text-gr">
+                <i class="bi bi-person-heart"></i>
+                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="d-md-inline-block d-none text-gr">會員登入</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- 景點一覽圖 -->
+    <header>
+        <!-- 標題圖 -->
+        <div class="header-banner">
+            <img src="img/banner-1.png" class="d-block w-100" alt="景點一覽">
+            <div class="d-block">
+                <h1 class="header-title">景點一覽</h1>
+            </div>
+        </div>
+        <!-- breadcrumb -->
+        <div class="Product-breadcrumb d-none d-md-block d-sm-block bg-bk2">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb d-flex align-items-center">
+                    <a href="index.html" class="text-blue">
+                        <i class="btn bi bi-houses-fill text-light"></i>
+                    </a>
+                    <li class="breadcrumb-item h5 mb-0"><a href="index.html" class="text-light">莉艾特山海漫遊</a></li>
+                    <li class="breadcrumb-item h5 mb-0"><a href="spot-list.html" class="text-light">景點一覽</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <!-- 主要內容 -->
+    <main>
+        <article id="cart-list" class="py-7">
+            <div class="container">
+                 <!-- 分類按鈕 -->
+                 <ul class="d-flex justify-content-center filter-btn mb-5 list-unstyled filter-controls">
+                    <li class="btn btn-custom me-1 px-2 py-1 active" data-filter="all">全部</li>
+                    <li class="btn btn-custom me-1 px-2 py-1" data-filter="sea">海港</li>
+                    <li class="btn btn-custom me-1 px-2 py-1" data-filter="mountain">山區</li>
+                    <li class="btn btn-custom me-1 px-2 py-1" data-filter="local">市區</li>
+                </ul>
+                <!-- 商品清單 -->
+                <div class="filter-area row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4">
+                    <!-- 多良車站 -->
+                    <div class="filter-item col wow bounceInLeft" data-wow-delay="0.1s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/Douliang-station.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="多良車站" data-bs-content="站在月台上，可俯瞰湛藍的太平洋，欣賞火車行駛在山海之間的夢幻畫面，被譽為『全台最美車站』">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <div class="">
+                                    <!-- 收藏按鈕放置右上角 -->
+                                    <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                        class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                        <i class="bi bi-bookmark-heart text-danger fs-5 me-2"></i>
+                                        <span class="d-none">加入收藏清單</span>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <!-- 內容 -->
+                                    <h6 class="card-title">多良車站</h6>
+                                    <small class="text-brown">
+                                        <i class="bi bi-geo-alt"></i>
+                                        台東縣多良部落
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 台東沿岸 -->
+                    <div class="filter-item col wow bounceInLeft" data-wow-delay="0.25s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/view-taitung.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="台東沿岸" data-bs-content="俯瞰湛藍的太平洋，欣賞海洋的美麗">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">台東沿岸</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        台東縣多良部落
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 阿里山博物館 -->
+                    <div class="filter-item col wow bounceInLeft" data-wow-delay="0.5s" data-category="mountain">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/Alishan-1.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="阿里山博物館" data-bs-content="阿里山博物館融合了豐富的歷史、人文與自然資源，是深入了解阿里山的絕佳場所。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">阿里山博物館</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        嘉義縣阿里山鄉
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 阿里山福森號 -->
+                    <div class="filter-item col wow bounceInLeft" data-wow-delay="0.5s" data-category="mountain">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/Alishan-2.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="阿里山福森號"
+                                data-bs-content="阿里山福森號（Formosensis）是阿里山森林鐵路最新推出的高級觀光列車，於2024年7月1日正式投入服務。該列車以台灣特有的紅檜與扁柏木材打造，車廂內部設計融合現代美學與傳統元素，被譽為「移動的美術館」。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">阿里山福森號</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        嘉義市北門車站
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 屏東縣小琉球鄉 -->
+                    <div class="filter-item col wow bounceInLeft" data-wow-delay="0.5s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/view3.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="屏東縣小琉球鄉"
+                                data-bs-content="小琉球是台灣唯一的珊瑚礁島嶼，擁有美麗的海岸線、清澈的海水和豐富的海洋生態。最著名的景點包括花瓶岩、白沙灣、潮間帶及龜山島，這些地點吸引許多喜愛潛水與海上活動的遊客。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">花瓶岩</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        屏東縣小琉球鄉
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高雄港 -->
+                    <div class="filter-item col wow bounceInLeft" data-wow-delay="0.75s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/view-kao.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="高雄港"
+                                data-bs-content="高雄港是台灣最大且最繁忙的港口之一，也是全球重要的貨櫃港口。擁有現代化的碼頭與設施，並且與全球多個國際港口有密切的航運聯繫。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">高雄港</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        高雄市苓雅區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高雄流行音樂中心 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/kao.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="高雄流行音樂中心"
+                                data-bs-content="現代化的音樂表演場館，設有大型音樂廳、戶外表演區及演唱會場地。建築設計獨特，形狀如同一把吉他，象徵高雄音樂的活力與創新。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">高雄流行音樂中心</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        高雄市苓雅區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高雄美麗島站 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.25s" data-category="local">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/view12.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="高雄美麗島站" data-bs-content="該圓頂由八萬多片彩色玻璃組成，營造出五光十色的視覺效果，成為高雄的代表性景點之一。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">美麗島站</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        高雄市新興區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 北港觀光大橋 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.5s" data-category="local">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/view10.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="北港觀光大橋"
+                                data-bs-content="結合觀光與交通功能的橋樑，橫跨北港溪，連接北港市區與北港舊港。橋身設計現代化，且提供觀景平台，讓遊客可以欣賞兩岸美景，特別是日落和夜景。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">北港觀光大橋</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        雲林縣北港鎮
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高美濕地 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.75s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/taichung-1.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="高美濕地" data-bs-content="擁有廣闊的濕地生態，棲息多種水鳥與招潮蟹、彈塗魚等生物。夕陽美景聞名，是台灣最美的賞景地之一。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">高美濕地</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        台中市清水區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高雄港橋 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.75s" data-category="sea">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/kao3.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="高雄港橋" data-bs-content="橫跨高雄港第三船渠，連接駁二藝術特區與棧貳庫，是全台首座水平旋轉橋，也是亞洲最長的跨港旋轉橋。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">高雄港橋</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        高雄市苓雅區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高雄逍遙園 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.75s" data-category="local">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/kao-2.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="高雄逍遙園"
+                                data-bs-content="位於高雄市左營區，是一座具有歷史意義的古蹟與庭園建築。原為清朝左營舊城內的重要宅邸，過去曾是當地望族的居所。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">逍遙園</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        高雄市新興區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 祝山車站 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.75s" data-category="mountain">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/Alishan.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="祝山車站"
+                                data-bs-content="祝山車站是阿里山森林鐵路的重要車站之一，以其壯麗的山景和日出景觀聞名。這裡是前往祝山觀日平台的起點，吸引了許多遊客來此觀看台灣最著名的日出之一。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">祝山車站</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        嘉義縣阿里山鄉
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 阿里山神木村 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.75s" data-category="mountain">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/mountain-al3.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="阿里山神木村日出"
+                                data-bs-content="神木村是阿里山著名的觀光景點之一，擁有年齡超過千年的巨型神木，這裡也是欣賞阿里山壯麗日出的絕佳位置。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">阿里山神木村日出</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        阿里山信義鄉神木村
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 龍崎空山祭 -->
+                    <div class="filter-item col wow bounceInRight" data-wow-delay="1.75s" data-category="mountain">
+                        <div class="card h-100 position-relative">
+                            <img src="img/subject-photo/view/view24.png" class="card-img-top" alt="商品圖">
+                            <!-- 按鈕訊息 -->
+                            <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                                tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-title="龍崎空山祭" data-bs-content="台南市龍崎區每年舉辦的燈光藝術盛會，結合當地自然景觀與文化特色，吸引眾多遊客前來觀賞。">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <div class="card-body position-relative">
+                                <!-- 收藏按鈕放置右上角 -->
+                                <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                    class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                    <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                    <span class="d-none">加入收藏清單</span>
+                                </a>
+                                <!-- 內容 -->
+                                <h6 class="card-title">龍崎空山祭</h6>
+                                <div class="text-brown">
+                                    <small>
+                                        <i class="bi bi-geo-alt"></i>
+                                        台南市龍崎區
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class=" pt-5 bg-light text-brown">
+        <div class="container">
+            <!-- 社群、連結、公司資訊 -->
+            <div class="footer-top">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <!-- 社群 -->
+                    <div class="col">
+                        <!-- LOGO -->
+                        <div class="text-lg-center mb-3">
+                            <a class="col-7" href="index.html" title="首頁">
+                                <img src="img/logo_name.png" alt="莉艾特山海漫遊商標">
+                            </a>
+                        </div>
+                        <!--社群 LOGO -->
+                        <ul class="list-unstyled d-flex align-items-center justify-content-lg-center social-icon">
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往FB粉專">
+                                    <i class="bi bi-facebook"></i>
+                                    <span class="d-none">FB粉專</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往Line官方">
+                                    <i class="bi bi-line"></i>
+                                    <span class="d-none">Line</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往IG官方帳號">
+                                    <i class="bi bi-instagram"></i>
+                                    <span class="d-none">IG</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 連結 -->
+                    <div class="col">
+                        <h3 class="h4">連結</h3>
+                        <hr class="col-8 pb-2">
+                        <ul class="list-unstyled row row-cols-2 g-3">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#information" title="前往 相關資訊">公告資訊</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tourist-hotspots" title="前往 山海熱點">山海熱點</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#apply" title="前往 線上申請">線上申請</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about" title="前往 關於我們">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" class="nav-link">
+                                    <span>會員登入</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 公司資訊 -->
+                    <div class="col">
+                        <h3 class="h5">聯絡資訊</h3>
+                        <hr class="col-8 pb-2">
+                        <ul class="list-unstyled lh-lg">
+                            <li><span>客服專線:</span>+886 926-222-666</li>
+                            <li><span>電子信箱:</span>a12@gmail.com.tw</li>
+                            <li><span>營業時間:</span>周一至周五10:00 ~ 17:30</li>
+                            <li><span>店休時間:</span>周休六日、國慶假日公休</li>
+                            <li><span>地址:</span><a href="https://maps.app.goo.gl/7GhuuH9ocVZsEXmx7"
+                                    title="前往Google Map[另開視窗]">台南市中西區友愛街16號</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 版權申告 -->
+            <hr class="mb-0">
+            <div class="py-3 text-center foot-bottom">
+                <small> &copy; 2025 莉艾特山海漫遊
+                    <span class="px-2 d-lg-inine-block d-none">|</span><br class="d-lg-none d-block">
+                    此網頁為排版所用，無商業用途
+                    <span class="px-2 d-lg-inine-block d-none">|</span><br class="d-lg-none d-block">
+                    文字圖片來源，若有侵權，請<a href="a12@gmail.com.tw" class="text-light" title="email"></a>來信告知
+                </small>
+            </div>
+        </div>
+    </footer>
+    <!-- 播放音樂 -->
+    <!-- Modal -->
+    <!-- 登入表單 -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">莉艾特會員登入</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post" class="was-validated">
+                    <div class="modal-body p-3">
+                        <!-- Member-login -->
+                        <div class="">
+                            <label for="memberIDLogin" class="form-label">會員帳號</label>
+                            <input type="text" class="form-control" id="memberIDLogin"
+                                aria-describedby="memberIDLoginFeedback" placeholder="請輸入會員帳號" required>
+                            <div class="valid-feedback">
+                                *會員輸入正確
+                            </div>
+                            <div id="memberIDLoginFeedback" class="invalid-feedback">
+                                *會員不得為空白
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="">
+                            <label for="memberPS" class="form-label">會員密碼</label>
+                            <input type="password" class="form-control" id="memberPS"
+                                aria-describedby="memberPSFeedback" placeholder="請輸入六位數密碼" required>
+                            <div class="valid-feedback">
+                                *密碼輸入正確
+                            </div>
+                            <div id="memberPSFeedback" class="invalid-feedback">
+                                *密碼不得為空白
+                            </div>
+                        </div>
+                        <!-- check box -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-bk2" for="flexCheckDefault">
+                                是否要記住密碼
+                            </label>
+                        </div>
+                        <!-- Google-login -->
+                        <div class="d-flex align-items-center">
+                            <hr class="col-5"><span class="px-3">or</span>
+                            <hr class="col-5">
+                        </div>
+                        <div class="border p-2">
+                            <a href="#" class="btn btn-secondary d-flex align-items-center justify-content-center"
+                                target="_blank" title="Google帳號登入">
+                                <div class="col-1 me-2 align-items-center">
+                                    <img src="img/logo-google.svg" alt="Google-Logo">
+                                </div>
+                                <span class="text-sp">Google帳號登入</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 按鈕 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" type="submit">登入</button>
+                        <button type="button" class="btn btn-secondary">會員註冊</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="bs-533/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/WOW-master/dist/wow.min.js"></script>
+    <script src="js/LineProgressbar-master/jquery.lineProgressbar.js"></script>
+    <script src="js/ui-main/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/filterizr-master/dist/jquery.filterizr.min.js"></script>
+    <script src="js/filterizr-master/dist/filterizr.min.js"></script>
+    <!-- music -->
+    <script>
+        function playMusic() {
+            var music = document.getElementById('background-music');
+            var playIcon = document.getElementById('playIcon');
+            var stopIcon = document.getElementById('stopIcon');
+
+            if (music.paused) {
+                music.play().catch(function (error) {
+                    console.log("音樂自動播放被瀏覽器阻擋", error);
+                });
+                playIcon.style.display = 'none';
+                stopIcon.style.display = 'inline';
+            } else {
+                music.pause();
+                playIcon.style.display = 'inline';
+                stopIcon.style.display = 'none';
+            }
+        }
+    </script>
+    <!-- 分類按鈕 -->
+    <script>
+        $(document).ready(function () {
+            $('.filter-controls li').on('click', function () {
+                var filterValue = $(this).attr('data-filter');
+                $('.filter-controls li').removeClass('active');
+                $(this).addClass('active');
+
+                if (filterValue == 'all') {
+                    $('.filter-item').show();
+                } else {
+                    $('.filter-item').each(function () {
+                        if ($(this).data('category') == filterValue) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- filter -->
+    <script>
+        $(document).ready(function () {
+            // 設置分類按鈕的點擊事件
+            $('.filter-controls li').on('click', function () {
+                // 取得當前被點擊按鈕的data-filter屬性
+                var filterValue = $(this).attr('data-filter');
+
+                // 移除所有按鈕的active類別
+                $('.filter-controls li').removeClass('active');
+
+                // 為當前被點擊的按鈕添加active類別
+                $(this).addClass('active');
+
+                // 根據filterValue進行篩選
+                if (filterValue == 'all') {
+                    // 顯示所有項目
+                    $('.filter-item').show();
+                } else {
+                    // 只顯示匹配的分類
+                    $('.filter-item').each(function () {
+                        if ($(this).data('category') == filterValue) {
+                            $(this).show(); // 顯示符合條件的項目
+                        } else {
+                            $(this).hide(); // 隱藏不符合條件的項目
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- 按鈕視窗 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'click' // 只在點擊時顯示
+                });
+            });
+            // 改變所有 popover-header 的背景顏色
+            popoverTriggerList.forEach(function (popoverTriggerEl) {
+                popoverTriggerEl.addEventListener('shown.bs.popover', function () {
+                    var popoverHeaders = document.querySelectorAll('.popover-header');  // 選取所有的 popover-header
+                    popoverHeaders.forEach(function (popoverHeader) {
+                        popoverHeader.style.backgroundColor = '#f7bcbcd5';  // 更改為你想要的顏色
+                    });
+                });
+            });
+        });
+    </script>
+    <!-- 景點按鈕視窗 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'hover'
+                });
+            });
+            popoverTriggerList.forEach(function (popoverTriggerEl) {
+                popoverTriggerEl.addEventListener('inserted.bs.popover', function () {
+                    var popoverHeaders = document.querySelectorAll('.popover-header');
+                    popoverHeaders.forEach(function (popoverHeader) {
+                        // popoverHeader.style.backgroundColor = '#332921cb';
+                        popoverHeader.style.color = '#ffffff';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

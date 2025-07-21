@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莉艾特山海漫遊</title>
+    <!-- icon -->
+    <link rel="icon" href="img/logo.svg">
+    <!-- css -->
+    <link rel="stylesheet" href="bs-533/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/icons-1.11.3/font/bootstrap-icons.css">
+    <!-- 頁面動態 -->
+    <link rel="stylesheet" href="js/WOW-master/css/libs/animate.css">
+    <!-- 進度條 -->
+    <link rel="stylesheet" href="js/LineProgressbar-master/jquery.lineProgressbar.css">
+    <!-- 燈箱效果 -->
+    <link rel="stylesheet" href="js/ui-main/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <!-- Top link -->
+    <div class="bg-light py-1 border-bottom border-1 border-brown">
+        <div class="container">
+            <!-- 語系、背景音樂-->
+            <div class="d-flex align-items-center justify-content-center">
+                <!-- 聯絡資訊 -->
+                <div>
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- Designer:Himari -->
+                        <li class="me-2">
+                            <a class="text-bk1" href="mailto:a12@gmail.com.tw" title="Designer:Himari">
+                                <i class="bi bi-suitcase-lg-fill"></i>
+                                <span class="d-md-inline-block d-none">Designer:Himari</span>
+                            </a>
+                        </li>
+                        <!-- 電話 -->
+                        <li>
+                            <a class="text-bk1" href="tel:+886 926-222-666" title="客服專線:+886 926-222-666">
+                                <i class="bi bi-phone-vibrate"></i>
+                                <span class="d-md-inline-block d-none">+886 926-222-666</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 語系、背景音樂 靠右 -->
+                <div class="ms-auto">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- 語系 -->
+                        <li class="me-2">
+                            <div class="dropdown lang-menu">
+                                <button class="btn dropdown-toggle p-0 " type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="true">
+                                    <i class="bi bi-translate text-brown"></i>
+                                    <span>Language</span>
+                                </button>
+                                <ul class="dropdown-menu text-center w-auto">
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="繁體中文">中文</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="日本語">日本語</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="英語">English</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <span class="px-3">|</span>
+                        <!-- 播放音樂按鈕 -->
+                        <li class="me-2">
+                            <div>
+                                <a class="text-brown" href="#" title="點擊背景音樂" onclick="playMusic()">
+                                    <i class="bi bi-music-player-fill"></i>
+                                    <span>背景音樂</span>
+                                    <i id="stopIcon" class="bi bi-stop-circle" style="display: none;"></i>
+                                    <i id="playIcon" class="bi bi-play-circle"></i>
+                                </a>
+                            </div>
+                            <!-- 音樂播放器 -->
+                            <audio id="background-music" loop>
+                                <source src="music/barradeen-bedtime-after-a-coffee(chosic.com).mp3" type="audio/mp3">
+                                您的瀏覽器不支援 HTML5 音樂播放。
+                            </audio>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主選單 -->
+    <nav class="navbar navbar-expand-xl shadow-sm position-sticky top-0 end-0 z-3 start-0 bg-logo-beige">
+        <div class="container-lg position-relative">
+            <!-- 會員Logo -->
+            <h1 class="navbar-brand col-xl-3 col-lg-9 col-md-8 px-xl-3 me-0 mb-0">
+                <a class="navbar-brand  me-0" href="index.html" title="前往首頁">
+                    <!-- 平板以上 -->
+                    <img class="d-md-inline-block d-none" src="img/logo_rename.png" alt="莉艾特山海漫遊 Logo">
+                    <!-- 手機板 -->
+                    <img class="d-md-none d-inline-block" src="img/logo_md.svg" alt="莉艾特山海漫遊 Logo">
+                    <span class="d-none">莉艾特山海漫遊</span> <!--xl 1200以上--->
+                </a>
+            </h1>
+            <!-- 漢堡選單 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#DropdownMenu"
+                aria-controls="DropdownMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 連結 -->
+            <div class="collapse navbar-collapse justify-content-center bg-logo-beige" id="DropdownMenu">
+                <ul class="navbar-nav mb-2 mb-lg-0 z-3 justify-content-between col-12 col-lg-10 text-center">
+                    <!-- 會員 (僅手機和平板顯示) -->
+                    <li class="nav-item d-xl-none br-list">
+                        <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="nav-link btn">
+                            <i class="bi bi-person-circle"></i>
+                            <span>會員登入</span>
+                        </a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link " href="index.html#information" title="前往 相關資訊">公告資訊</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="index.html#tour-guide" title="前往 山海漫遊">山海漫遊</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="apply.html" title="前往 線上申請">線上申請</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about" title="前往 關於我們">關於我們</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 會員(僅電腦版顯示) -->
+            <div class="d-none d-xl-flex align-items-center ms-auto text-decoration-none text-gr">
+                <i class="bi bi-person-heart"></i>
+                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="d-md-inline-block d-none text-gr">會員登入</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- 導覽申請 -->
+    <header>
+        <!-- 標題圖 -->
+        <div class="header-banner">
+            <img src="img/banner-5.png" class="d-block w-100 img-home" alt="景點一覽">
+            <div class="d-block text-overlay">
+                <h1 class="header-title text-light">導覽申請</h1>
+            </div>
+        </div>
+        <!-- breadcrumb -->
+        <div class="Product-breadcrumb d-none d-md-block d-sm-block bg-bl">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb d-flex align-items-center">
+                    <a href="/" class="text-blue">
+                        <i class="btn bi bi-houses-fill text-light"></i>
+                    </a>
+                    <li class="breadcrumb-item"><a href="/" class="text-light">首頁</a></li>
+                    <li class="breadcrumb-item"><a href="/event/event" class="text-light">導覽申請</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <!-- 主要內容 -->
+    <main>
+        <!-- 申請須知 -->
+        <article id="know" class="py-5">
+            <div class="container">
+                <div class="card border-0">
+                    <div class="card-header border-0 bg-pink">
+                        <span class="text-light fs-5">申請須知</span>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">申請對象</th>
+                                        <td>有興趣之一般民眾、學校機構、企業團隊、旅遊團體。個人或團體皆可申請，團體需至少20人（依景點規定更動）。</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">申請方式</th>
+                                        <td>請於導覽日期之14天前填寫線上申請表單，網站皆以線上申請為主，申請成功後，將以 Email或電話通知確認。</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">時間與場次</th>
+                                        <td colspan="2">導覽時段皆分為晨間場6:00-11:00及日落場13:00-18:00。</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">付款方式</th>
+                                        <td colspan="2">現場支付或線上付款，依活動不同或有免費場次。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 注意事項 -->
+        <article id="precaution" class="py-5">
+            <div class="container">
+                <div class="card border-0">
+                    <div class="card-header border-0 bg-pink">
+                        <span class="text-light fs-5">注意事項</span>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1.</th>
+                                        <td>請準時抵達集合地點，若有臨時要事，請通知場次負責人，未通知且遲到超過50分鐘者視同放棄，並停止受理申請6個月，敬請諒解。</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2.</th>
+                                        <td>請遵守導覽人員指引，不隨意離隊，禁止喧嘩、吸煙或破壞景點設施。</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3.</th>
+                                        <td colspan="2">若遇天候不佳或不可抗力因素，導覽可能取消或延期，將另行通知。</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4.</th>
+                                        <td colspan="2">請詳閱活動說明，了解諸事項說明再行申請。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 申請 -->
+        <article id="apply-form" class="py-5">
+            <div class="container">
+                <nav id="navbar-example2" class="navbar bg-pink py-2 px-3 mb-3">
+                    <a class="navbar-brand text-light">預約申請</a>
+                </nav>
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+                    data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                    <form class="row mb-0 py-5" action="/event/event" method="post">
+                        <div class="col-lg-9 mx-auto mt-4 mt-lg-0">
+                            <div class="row">
+                                <div class="col-6 mb-4">
+                                    <label>申請人姓名</label>
+                                    <input type="text" name="name" class="form-control border-form-control"
+                                        placeholder="請輸入姓名">
+                                </div>
+
+                                <div class="col-md-6 col-6 mb-4">
+                                    <label for="date">導覽日期</label>
+                                    <input type="date" name="date" class="form-control border-form-control">
+                                </div>
+
+                                <div class="col-md-6 col-6 mb-4">
+                                    <label for="number">參加人數</label>
+                                    <input type="number" name="number" class="form-control border-form-control" min="1">
+                                </div>
+
+                                <div class="col-6 mb-4">
+                                    <label>身分別</label>
+                                    <select class="form-select border-form-control" name="identity">
+                                        <option value="personal">個人申請</option>
+                                        <option value="school">學校機構</option>
+                                        <option value="business">企業團隊</option>
+                                        <option value="travel">旅遊團體</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-6 mb-4">
+                                    <label>導覽場次</label>
+                                    <select class="form-select border-form-control" name="time">
+                                        <option value="am">晨間場</option>
+                                        <option value="pm">日落場</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <label>導覽地點</label>
+                                    <select class="form-select border-form-control" name="place">
+                                        <option selected>請選擇</option>
+                                        <option value="Yanshui">鹽水</option>
+                                        <option value="Alishan">阿里山</option>
+                                        <option value="Jiufen">九份</option>
+                                        <option value="Gaomei">高美濕地</option>
+                                        <option value="Chikanlou">赤崁樓</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <label>電話號碼</label>
+                                    <input type="text" name="tel" class="form-control border-form-control"
+                                        placeholder="請輸入電話號碼">
+                                </div>
+
+                                <!-- 付款方式 -->
+                                <div class="col-12 mb-4">
+                                    <label class="form-label">付款方式</label>
+                                    <div class="list-group">
+                                        <div class="d-flex mb-3">
+                                            <input class="btn-check" type="radio" name="payments" id="online"
+                                                value="online">
+                                            <label for="online" class="btn list-group-item w-100">線上支付</label>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <input class="btn-check" type="radio" name="payments" id="cash"
+                                                value="cash">
+                                            <label for="cash" class="btn list-group-item w-100">現場支付</label>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <input class="btn-check" type="radio" name="payments" id="free"
+                                                value="free">
+                                            <label for="free" class="btn list-group-item w-100">免費場次</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-pink text-light">提交申請</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class=" pt-5 bg-light text-brown">
+        <div class="container">
+            <!-- 社群、連結、公司資訊 -->
+            <div class="footer-top">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <!-- 社群 -->
+                    <div class="col">
+                        <!-- LOGO -->
+                        <div class="text-lg-center mb-3">
+                            <a class="col-7" href="index.html" title="首頁">
+                                <img src="img/logo_name.png" alt="莉艾特山海漫遊商標">
+                            </a>
+                        </div>
+                        <!--社群 LOGO -->
+                        <ul class="list-unstyled d-flex align-items-center justify-content-lg-center social-icon">
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往FB粉專">
+                                    <i class="bi bi-facebook"></i>
+                                    <span class="d-none">FB粉專</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往Line官方">
+                                    <i class="bi bi-line"></i>
+                                    <span class="d-none">Line</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往IG官方帳號">
+                                    <i class="bi bi-instagram"></i>
+                                    <span class="d-none">IG</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 連結 -->
+                    <div class="col">
+                        <h3 class="h4">連結</h3>
+                        <hr class="col-8 pb-2">
+                        <ul class="list-unstyled row row-cols-2 g-3">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#information" title="前往 相關資訊">公告資訊</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tourist-hotspots" title="前往 山海熱點">山海熱點</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="apply.html" title="前往 線上申請">線上申請</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about" title="前往 關於我們">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" class="nav-link">
+                                    <span>會員登入</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 公司資訊 -->
+                    <div class="col">
+                        <h3 class="h5">聯絡資訊</h3>
+                        <hr class="col-8 pb-2">
+                        <ul class="list-unstyled lh-lg">
+                            <li><span>客服專線:</span>+886 926-222-666</li>
+                            <li><span>電子信箱:</span>a12@gmail.com.tw</li>
+                            <li><span>營業時間:</span>周一至周五10:00 ~ 17:30</li>
+                            <li><span>店休時間:</span>周休六日、國慶假日公休</li>
+                            <li><span>地址:</span><a href="https://maps.app.goo.gl/7GhuuH9ocVZsEXmx7"
+                                    title="前往Google Map[另開視窗]">台南市中西區友愛街16號</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 版權申告 -->
+            <hr class="mb-0">
+            <div class="py-3 text-center foot-bottom">
+                <small> &copy; 2025 莉艾特山海漫遊
+                    <span class="px-2 d-lg-inine-block d-none">|</span><br class="d-lg-none d-block">
+                    此網頁為排版所用，無商業用途
+                    <span class="px-2 d-lg-inine-block d-none">|</span><br class="d-lg-none d-block">
+                    文字圖片來源，若有侵權，請<a href="a12@gmail.com.tw" class="text-light" title="email"></a>來信告知
+                </small>
+            </div>
+        </div>
+    </footer>
+    <!-- 登入表單 -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">莉艾特會員登入</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post" class="was-validated">
+                    <div class="modal-body p-3">
+                        <!-- Member-login -->
+                        <div class="">
+                            <label for="memberIDLogin" class="form-label">會員帳號</label>
+                            <input type="text" class="form-control" id="memberIDLogin"
+                                aria-describedby="memberIDLoginFeedback" placeholder="請輸入會員帳號" required>
+                            <div class="valid-feedback">
+                                *會員輸入正確
+                            </div>
+                            <div id="memberIDLoginFeedback" class="invalid-feedback">
+                                *會員不得為空白
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="">
+                            <label for="memberPS" class="form-label">會員密碼</label>
+                            <input type="password" class="form-control" id="memberPS"
+                                aria-describedby="memberPSFeedback" placeholder="請輸入六位數密碼" required>
+                            <div class="valid-feedback">
+                                *密碼輸入正確
+                            </div>
+                            <div id="memberPSFeedback" class="invalid-feedback">
+                                *密碼不得為空白
+                            </div>
+                        </div>
+                        <!-- check box -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-bk2" for="flexCheckDefault">
+                                是否要記住密碼
+                            </label>
+                        </div>
+                        <!-- Google-login -->
+                        <div class="d-flex align-items-center">
+                            <hr class="col-5"><span class="px-3">or</span>
+                            <hr class="col-5">
+                        </div>
+                        <div class="border p-2">
+                            <a href="#" class="btn btn-secondary d-flex align-items-center justify-content-center"
+                                target="_blank" title="Google帳號登入">
+                                <div class="col-1 me-2 align-items-center">
+                                    <img src="img/logo-google.svg" alt="Google-Logo">
+                                </div>
+                                <span class="text-sp">Google帳號登入</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 按鈕 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" type="submit">登入</button>
+                        <button type="button" class="btn btn-secondary">會員註冊</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="bs-533/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/WOW-master/dist/wow.min.js"></script>
+    <script src="js/LineProgressbar-master/jquery.lineProgressbar.js"></script>
+    <script src="js/ui-main/dist/fancybox/fancybox.umd.js"></script>
+    <script> // 關於(進度條)
+        new WOW().init();
+        $('#about-1').LineProgressbar({
+            percentage: 95,
+            fillBackgroundColor: '#6a994e',
+            height: '15px',
+            radius: '15px'
+        });
+        $('#about-2').LineProgressbar({
+            percentage: 60,
+            fillBackgroundColor: '#6a994e',
+            height: '15px',
+            radius: '15px'
+        });
+        $('#about-3').LineProgressbar({
+            percentage: 80,
+            fillBackgroundColor: '#6a994e',
+            height: '15px',
+            radius: '15px'
+        });
+        $('#about-4').LineProgressbar({
+            percentage: 100,
+            fillBackgroundColor: '#6a994e',
+            height: '15px',
+            radius: '15px'
+        });
+        $('#about-5').LineProgressbar({
+            percentage: 65,
+            fillBackgroundColor: '#6a994e',
+            height: '15px',
+            radius: '15px'
+        });
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+    <!-- music -->
+    <script>
+        function playMusic() {
+            var music = document.getElementById('background-music');
+            var playIcon = document.getElementById('playIcon');
+            var stopIcon = document.getElementById('stopIcon');
+
+            if (music.paused) {
+                music.play().catch(function (error) {
+                    console.log("音樂自動播放被瀏覽器阻擋", error);
+                });
+                playIcon.style.display = 'none';
+                stopIcon.style.display = 'inline';
+            } else {
+                music.pause();
+                playIcon.style.display = 'inline';
+                stopIcon.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

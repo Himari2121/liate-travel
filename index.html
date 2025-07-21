@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莉艾特山海漫遊</title>
+    <!-- icon -->
+    <link rel="icon" href="img/logo.svg">
+    <!-- css -->
+    <link rel="stylesheet" href="bs-533/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/icons-1.11.3/font/bootstrap-icons.css">
+    <!-- 頁面動態 -->
+    <link rel="stylesheet" href="js/WOW-master/css/libs/animate.css">
+    <!-- 輪播圖 -->
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <!-- 進度條 -->
+    <link rel="stylesheet" href="js/LineProgressbar-master/jquery.lineProgressbar.css">
+    <!-- 燈箱效果 -->
+    <link rel="stylesheet" href="js/ui-main/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <!-- Top link -->
+    <div class="bg-light py-1 border-bottom border-1 border-brown">
+        <div class="container">
+            <!-- 語系、背景音樂-->
+            <div class="d-flex align-items-center justify-content-center">
+                <!-- 聯絡資訊 -->
+                <div>
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- Designer:Himari -->
+                        <li class="me-2">
+                            <a class="text-bk1" href="mailto:a12@gmail.com.tw" title="Designer:Himari">
+                                <i class="bi bi-suitcase-lg-fill"></i>
+                                <span class="d-md-inline-block d-none">Designer:Himari</span>
+                            </a>
+                        </li>
+                        <!-- 電話 -->
+                        <li>
+                            <a class="text-bk1" href="tel:+886 926-222-666" title="客服專線:+886 926-222-666">
+                                <i class="bi bi-phone-vibrate"></i>
+                                <span class="d-md-inline-block d-none">+886 926-222-666</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 語系、背景音樂 靠右 -->
+                <div class="ms-auto">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- 語系 -->
+                        <li class="me-2">
+                            <div class="dropdown lang-menu">
+                                <button class="btn dropdown-toggle p-0 " type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="true">
+                                    <i class="bi bi-translate text-brown"></i>
+                                    <span>Language</span>
+                                </button>
+                                <ul class="dropdown-menu text-center w-auto">
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="繁體中文">中文</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="日本語">日本語</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#" title="英語">English</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <span class="px-3">|</span>
+                        <!-- 播放音樂按鈕 -->
+                        <li class="me-2">
+                            <div>
+                                <a class="text-brown" href="#" title="點擊背景音樂" onclick="playMusic()">
+                                    <i class="bi bi-music-player-fill"></i>
+                                    <span>背景音樂</span>
+                                    <i id="stopIcon" class="bi bi-stop-circle" style="display: none;"></i>
+                                    <i id="playIcon" class="bi bi-play-circle"></i>
+                                </a>
+                            </div>
+                            <!-- 音樂播放器 -->
+                            <audio id="background-music" loop>
+                                <source src="music/barradeen-bedtime-after-a-coffee(chosic.com).mp3"
+                                    type="audio/mp3">
+                                您的瀏覽器不支援 HTML5 音樂播放。
+                            </audio>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主選單 -->
+    <nav class="navbar navbar-expand-xl shadow-sm position-sticky top-0 end-0 z-3 start-0 bg-logo-beige">
+        <div class="container-lg position-relative">
+            <!-- 會員Logo -->
+            <h1 class="navbar-brand col-xl-3 col-lg-9 col-md-8 px-xl-3 me-0 mb-0">
+                <a class="navbar-brand  me-0" href="index.html" title="前往首頁">
+                    <!-- 平板以上 -->
+                    <img class="d-md-inline-block d-none" src="img/logo_rename.png" alt="莉艾特山海漫遊 Logo">
+                    <!-- 手機板 -->
+                    <img class="d-md-none d-inline-block" src="img/logo_md.svg" alt="莉艾特山海漫遊 Logo">
+                    <span class="d-none">莉艾特山海漫遊</span> <!--xl 1200以上--->
+                </a>
+            </h1>
+            <!-- 漢堡選單 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#DropdownMenu"
+                aria-controls="DropdownMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 連結 -->
+            <div class="collapse navbar-collapse justify-content-center bg-logo-beige" id="DropdownMenu">
+                <ul class="navbar-nav mb-2 mb-lg-0 z-3 justify-content-between col-12 col-lg-10 text-center">
+                    <!-- 會員 (僅手機和平板顯示) -->
+                    <li class="nav-item d-xl-none br-list">
+                        <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="nav-link btn">
+                            <i class="bi bi-person-circle"></i>
+                            <span>會員登入</span>
+                        </a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link " href="/#information" title="前往 相關資訊">公告資訊</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="/#tour-guide" title="前往 山海漫遊">山海漫遊</a>
+                    </li>
+                    <li class="nav-item br-list">
+                        <a class="nav-link" href="apply.html" title="前往 線上申請">線上申請</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#about" title="前往 關於我們">關於我們</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 會員(僅電腦版顯示) -->
+            <div class="d-none d-xl-flex align-items-center ms-auto text-decoration-none text-gr">
+                <i class="bi bi-person-heart"></i>
+                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="d-md-inline-block d-none text-gr">會員登入</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- 行銷圖/輪播圖 -->
+    <header>
+        <div id="banner-slide" class="carousel slide" data-bs-ride="carousel">
+            <!-- 點 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <!-- 圖片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item  active">
+                    <img src="img/banner-1.png" class="d-block w-100" alt="banner-1">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="title display-3">多良車站</h2>
+                        <p>站在月台上，可俯瞰湛藍的太平洋，欣賞火車行駛在山海之間的夢幻畫面，被譽為「全台最美車站」</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/banner-2.png" class="d-block w-100" alt="banner-2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="title display-3">台南西市場</h2>
+                        <p>台南西市場（原名「西門市場」）是台南市一座具有百年歷史的傳統市場<br>
+                            ，位於中西區正興街、國華街與友愛街之間，是日治時期台南的主要市場之一，曾與東市場、南市場、北市場並列台南四大公有市場。</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/banner-3.png" class="d-block w-100" alt="banner-3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="title display-3">宜蘭三星鄉田間</h2>
+                        <p>廣闊的農田、美麗的自然景觀與純樸的鄉村氛圍聞名。光束灑落田野，畫面如詩如畫，讓人沉醉於這片寧靜的土地。</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/banner-4.png" class="d-block w-100" alt="banner-3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="title display-3">月津港親水公園</h2>
+                        <p>是鹽水地區最具代表性的景點之一，結合水岸景觀、歷史文化與藝術裝置的親水公園，特別是每年舉辦的「月津港燈節」成為台南冬季最迷人的夜間景點之一</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/banner-5.png" class="d-block w-100" alt="banner-3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>井仔腳瓦盤鹽田</h2>
+                        <p>台南市北門區，是台灣最古老的曬鹽場，擁有超過200年的歷史。這裡的獨特景色，結合了傳統製鹽文化與夕陽倒映的美景，成為台南必訪的特色景點之一。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 箭頭 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#banner-slide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#banner-slide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <!-- main 內容 -->
+    <main>
+        <!-- 相關資訊-->
+        <article id="information" class="py-7">
+            <div class="container mb-3">
+                <!-- 活動公告 -->
+                <div class="col wow bounceInLeft">
+                    <!-- 區塊標題/訊息公告 -->
+                    <div class="text-center section-title mb-5">
+                        <h2>相關資訊公告</h2>
+                    </div>
+                    <!-- news -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://2025taiwanlanternfestival.org/File/Get/bee3ceed-35da-4139-8df6-26647931a11c"
+                                    class="card-img-top" alt="前往2025桃園燈會">
+                                <div class="card-body">
+                                    <a href="https://2025taiwanlanternfestival.org/" class="   -action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="card-text mb-1">
+                                                <i class="bi bi-megaphone"></i> 2025/02/07～2025/02/23
+                                                <span class="px-2">|</span> 活動公告組
+                                            </p>
+                                        </div>
+                                        <span class="text-center text-gr">
+                                            <i class="bi bi-geo-alt"></i> 2025桃園燈會
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://www.taiwan.net.tw/pic.ashx?qp=event/45366ae1-a879-4ae5-839c-345d821ba74c.jpg&sizetype=3"
+                                    class="card-img-top" alt="前往屏東落山風藝術季">
+                                <div class="card-body">
+                                    <a href="https://www.amazing-pingtung.com/ptlsf" class="   -action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="card-text mb-1">
+                                                <i class="bi bi-megaphone"></i> 2024/12/20～2025/03/02
+                                                <span class="px-2">|</span> 活動公告組
+                                            </p>
+                                        </div>
+                                        <span class="text-center text-gr">
+                                            <i class="bi bi-geo-alt"></i> 屏東落山風藝術季
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://tourism.chcg.gov.tw/upload/259/2024010413424646684.jpg"
+                                    class="card-img-top" alt="前往彰化月影燈節">
+                                <div class="card-body">
+                                    <a href="https://tourism.chcg.gov.tw/CalendarlContent.aspx?id=560&chk=bfa1313f-77ed-4886-9e44-00b89891d9ca"
+                                        class="   -action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="card-text mb-1">
+                                                <i class="bi bi-megaphone"></i> 2024/12/28～2025/03/02
+                                                <span class="px-2">|</span> 活動公告組
+                                            </p>
+                                        </div>
+                                        <span class="text-center text-gr">
+                                            <i class="bi bi-geo-alt"></i> 彰化月影燈節
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 導覽申請 -->
+        <article id="apply" class="py-7 pb-15">
+            <div class="container">
+                <!-- 區塊標題 -->
+                <div class="text-center section-title mb-5">
+                    <h2>快速申請</h2>
+                    <p>高品質標準，讓顧客安心</p>
+                </div>
+                <!-- 內容 -->
+                <!-- <div class="owl-carousel owl-theme"> -->
+                <!-- 鹽水導覽圖 -->
+                <div class="item2">
+                    <div id="tourguide" class="card mb-3 border-0 bg-transparent">
+                        <!-- 鹽水 -->
+                        <div class="row d-flex justify-content-center g-2 mb-2">
+                            <div class="col-10 col-md-7 col-lg-4">
+                                <img src="img/subject-photo/subject-photo2/IMG_4816.png" class="rounded-start"
+                                    alt="行銷圖檔">
+                            </div>
+                            <div class="col-10 col-md-6">
+                                <h2 class="card-header border-0 bg-transparent fw-bold text-warning ">
+                                    鹽水月津港漫遊</h2>
+                                <div class="card-body mb-3">
+                                    <h6 class="card-title">歡迎參加鹽水月津港漫遊導覽，跟隨專業導覽員的腳步，探索這座兼具歷史文化與光影藝術的水鄉之地。</h6>
+                                    <small class="card-text">導覽時間 : 4-10月每週六16:00-18:00 /
+                                        11-3月每週六15:00-17:00；每周日9-11時</small><br>
+                                    <small class="card-text">集合地點 : 橋南老街口（台南市鹽水區南門路1號）</small>
+                                </div>
+                                <div class="btn-container ms-3">
+                                    <a href="apply.html" class="btn btn-brown btn-sm mb-3">預約導覽<i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 阿里山導覽圖 -->
+                <div class="item mymb">
+                    <div id="tourguide" class="card mb-3 border-0 bg-transparent">
+                        <!-- alish -->
+                        <div class="row d-flex justify-content-center g-2 mb-2">
+                            <div class="col-10 col-md-7 col-lg-4">
+                                <img src="img/subject-photo/view/Alishan-5.png" class="rounded-start w-100" alt="行銷圖檔">
+                            </div>
+                            <div class="col-10 col-md-6">
+                                <h2 class="card-header border-0 bg-transparent fw-bold text-warning ">
+                                    阿里山國家森林遊樂區</h2>
+                                <div class="card-body mb-3">
+                                    <h6 class="card-title">在地人帶領體驗您所不知的阿里山</h6>
+                                    <small class="card-text">導覽時間 : 每周六日上午9點</small><br>
+                                    <small class="card-text">集合地點 : 阿里山旅客服務中心集合</small>
+                                </div>
+                                <div class="btn-container ms-3">
+                                    <a href="apply.html" class="btn btn-brown btn-sm mb-3">預約導覽<i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 九份導覽圖 -->
+                <div class="item mymb">
+                    <div id="tourguide" class="card mb-3 border-0 bg-transparent">
+                        <!-- alish -->
+                        <div class="row d-flex justify-content-center g-2 mb-2">
+                            <div class="col-10 col-md-7 col-lg-4">
+                                <img src="https://www.welcometw.com/wp-content/uploads/2020/jiufen/04/%E4%B9%9D%E4%BB%BD%E9%87%91%E7%A4%A6%E5%8D%9A%E7%89%A9%E9%A4%A86-scaled.jpg"
+                                    class="rounded-start w-100" alt="行銷圖檔">
+                            </div>
+                            <div class="col-10 col-md-6">
+                                <h2 class="card-header border-0 bg-transparent fw-bold text-warning ">
+                                    九份夜間導覽</h2>
+                                <div class="card-body mb-3">
+                                    <h6 class="card-title">帶領您體驗夜間九份的金礦歷史</h6>
+                                    <small class="card-text">導覽時間 : 每天19:50 – 22:30 </small><br>
+                                    <small class="card-text">集合地點 : 金礦博物館</small>
+                                </div>
+                                <div class="btn-container ms-3">
+                                    <a href="apply.html" class="btn btn-brown btn-sm mb-3">預約導覽<i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 高美濕地導覽圖 -->
+                <div class="item mymb">
+                    <div id="tourguide" class="card mb-3 border-0 bg-transparent">
+                        <!-- alish -->
+                        <div class="row d-flex justify-content-center g-2 mb-2">
+                            <div class="col-10 col-md-7 col-lg-4">
+                                <img src="img/subject-photo/view/taichung-1.png" class="rounded-start w-100" alt="行銷圖檔">
+                            </div>
+                            <div class="col-10 col-md-6">
+                                <h2 class="card-header border-0 bg-transparent fw-bold text-warning ">
+                                    高美濕地</h2>
+                                <div class="card-body mb-3">
+                                    <h6 class="card-title">探索自然美景及生態之旅</h6>
+                                    <small class="card-text">人數限制:2~3人 </small><br>
+                                    <small class="card-text">集合地點 : 阿成停車場 </small><br>
+                                    <small class="card-text">費用:$650</small>
+                                </div>
+                                <div class="btn-container ms-3">
+                                    <a href="apply.html" class="btn btn-brown btn-sm mb-3">預約導覽<i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 赤崁樓導覽圖 -->
+                <div class="item">
+                    <div id="tourguide" class="card mb-3 border-0 bg-transparent">
+                        <!-- alish -->
+                        <div class="row d-flex justify-content-center g-2 mb-2">
+                            <div class="col-10 col-md-7 col-lg-4">
+                                <img src="https://historic.tainan.gov.tw/upload/cht/159/251_img_2.jpg"
+                                    class="rounded-start w-100" alt="行銷圖檔">
+                            </div>
+                            <div class="col-10 col-md-6">
+                                <h2 class="card-header border-0 bg-transparent fw-bold text-warning ">
+                                    台南赤崁樓導覽</h2>
+                                <div class="card-body mb-3">
+                                    <h6 class="card-title">探索自然美景及生態之旅</h6>
+                                    <small class="card-text">導覽時間: 每周六、日與國定假日10:00~15:00(每小時一場) </small><br>
+                                    <small class="card-text">集合地點 : 赤崁樓 </small><br>
+                                    <small class="card-text">費用:免費</small>
+                                </div>
+                                <div class="btn-container ms-3">
+                                    <a href="apply.html" class="btn btn-brown btn-sm mb-3">預約導覽<i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </article>
+        <!-- 山海熱點 -->
+        <article id="tourist-hotspots" class="py-7 position-relative">
+            <!-- 電腦版 -->
+            <div class="trapezoid text-center position-absolute top-0 start-0 bottom-0 mt-3">
+                <h3>山海熱點</h3>
+                <small>為你精選熱門景點</small>
+            </div>
+            <!-- 手機版 -->
+            <div class="smtrapezoid text-bk text-center mb-2">
+                <h3>山海熱點</h3>
+                <small>為你精選熱門景點</small>
+            </div>
+            <!-- position-relative check-->
+            <div class=" col-10 col-md-12 mx-auto">
+                <div id="products-slide" class="owl-carousel owl-theme">
+                    <!-- 高美濕地 -->
+                    <div class="item card  position-relative">
+                        <img src="img/subject-photo/view/Douliang-station.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="多良車站" data-bs-content="站在月台上，可俯瞰湛藍的太平洋，欣賞火車行駛在山海之間的夢幻畫面，被譽為『全台最美車站』">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">多良車站</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    台東縣多良部落
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 阿里山博物館 -->
+                    <div class="item card h-100 position-relative">
+                        <img src="img/subject-photo/view/Alishan-1.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="阿里山博物館" data-bs-content="阿里山博物館融合了豐富的歷史、人文與自然資源，是深入了解阿里山的絕佳場所。">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">阿里山博物館</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    嘉義縣阿里山鄉
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 屏東縣小琉球鄉 -->
+                    <div class="item card h-100 position-relative">
+                        <img src="img/subject-photo/view/view3.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="屏東縣小琉球鄉"
+                            data-bs-content="小琉球是台灣唯一的珊瑚礁島嶼，擁有美麗的海岸線、清澈的海水和豐富的海洋生態。最著名的景點包括花瓶岩、白沙灣、潮間帶及龜山島，這些地點吸引許多喜愛潛水與海上活動的遊客。">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">花瓶岩</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    屏東縣小琉球鄉
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 高美濕地 -->
+                    <div class="item card h-100 position-relative">
+                        <img src="img/subject-photo/view/taichung-1.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="高美濕地" data-bs-content="擁有廣闊的濕地生態，棲息多種水鳥與招潮蟹、彈塗魚等生物。夕陽美景聞名，是台灣最美的賞景地之一。">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">高美濕地</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    台中市清水區
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 台東沿岸 -->
+                    <div class="item card h-100 position-relative">
+                        <img src="img/subject-photo/view/view-taitung.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="台東沿岸" data-bs-content="俯瞰湛藍的太平洋，欣賞海洋的美麗">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">台東沿岸</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    台東縣多良部落
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 阿里山神木村 -->
+                    <div class="item card h-100 position-relative">
+                        <img src="img/subject-photo/view/mountain-al3.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="阿里山神木村日出"
+                            data-bs-content="神木村是阿里山著名的觀光景點之一，擁有年齡超過千年的巨型神木，這裡也是欣賞阿里山壯麗日出的絕佳位置。">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">阿里山神木村日出</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    阿里山信義鄉神木村
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 阿里山福森號 -->
+                    <div class="item card h-100 position-relative">
+                        <img src="img/subject-photo/view/Alishan-2.png" class="card-img-top" alt="商品圖">
+                        <!-- 按鈕訊息 -->
+                        <a class="btn btn-secondary btn-sm position-absolute top-0 end-0 px-2 py-1 mt-1 me-2 rounded-circle text-uppercase "
+                            tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                            data-bs-title="阿里山福森號"
+                            data-bs-content="阿里山福森號（Formosensis）是阿里山森林鐵路最新推出的高級觀光列車，於2024年7月1日正式投入服務。該列車以台灣特有的紅檜與扁柏木材打造，車廂內部設計融合現代美學與傳統元素，被譽為「移動的美術館」。">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <div class="card-body position-relative">
+                            <!-- 收藏按鈕放置右上角 -->
+                            <a href="javascript:void(0);" title="點擊加入收藏清單"
+                                class="position-absolute top-0 end-0 p-2 text-decoration-none">
+                                <i class="bi bi-bookmark-heart text-danger fs-5"></i>
+                                <span class="d-none">加入收藏清單</span>
+                            </a>
+                            <!-- 內容 -->
+                            <h6 class="card-title">阿里山福森號</h6>
+                            <div class="text-brown">
+                                <small>
+                                    <i class="bi bi-geo-alt"></i>
+                                    嘉義市北門車站
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 關於我們 -->
+        <article id="about" class="py-7 bg-img"
+            style="background-image: url(img/subject-photo/subject-photo2/IMG_9850.png);">
+            <div class="container bg-light bg-opacity-50 py-5 position-relative">
+                <div class="d-flex align-items-center justify-content-md-between flex-md-nowrap flex-wrap">
+                    <!-- 區塊標體 -->
+                    <div class="col-xl-3 col-md-5 col-12 mb-md-0 mb-4">
+                        <div class="text-center section-title ">
+                            <h2>關於我們</h2>
+                            <span class="title">旅行不只是打卡——Liate，帶你發現更深層的感動</span><br>
+                            <small>在台灣，每一座山、每一片海都有自己的故事，而莉艾特山海漫遊（Liate）正是為了將這些故事帶給你而誕生。我們不只是提供景點資訊，而是希望透過精選內容，帶你深入探索台灣的秘境與風景，讓每一次旅行都成為難忘的回憶。無論是阿里山的日出、濱海的蔚藍浪潮，還是那些鮮為人知的美景與文化故事，我們都致力於用細膩的視角，帶領你體驗最獨特的旅遊樂趣。</small>
+                        </div>
+                    </div>
+                    <!-- 訂閱表單 -->
+                    <div class="col-md-7 col-12 pe-xl-4 ps-lg-0 ps-md-3">
+                        <form action="#" method="post">
+                            <div class="input-group mb-3 rounded-pill">
+                                <label for="for-news-letter" class="position-absolute z-100">請輸入電子信箱</label>
+                                <input type="email" class="form-control" placeholder="請輸入您的電子信箱" aria-label="請輸入您的電子信箱"
+                                    aria-describedby="basic-addon2" id="for-news-letter">
+                                <!-- <span class="input-group-text" id="basic-addon2">@example.com</span> -->
+                                <button type="submit"
+                                    class="btn  btn-outline-secondary bg-bl text-wh rounded-end-pill">訂閱</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="position-absolute start-0 wow swing center">
+                    <div class="logo-s">
+                        <img src="img/logo.svg" alt="莉艾特山海漫遊商標">
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class=" pt-5 bg-light text-brown">
+        <div class="container">
+            <!-- 社群、連結、公司資訊 -->
+            <div class="footer-top">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <!-- 社群 -->
+                    <div class="col">
+                        <!-- LOGO -->
+                        <div class="text-lg-center mb-3">
+                            <a class="col-7" href="index.html" title="首頁">
+                                <img src="img/logo_rename.png" alt="莉艾特山海漫遊商標">
+                            </a>
+                        </div>
+                        <!--社群 LOGO -->
+                        <ul class="list-unstyled d-flex align-items-center justify-content-lg-center social-icon">
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往FB粉專">
+                                    <i class="bi bi-facebook"></i>
+                                    <span class="d-none">FB粉專</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往Line官方">
+                                    <i class="bi bi-line"></i>
+                                    <span class="d-none">Line</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-brown fs-2" href="#" target="_blank" title="前往IG官方帳號">
+                                    <i class="bi bi-instagram"></i>
+                                    <span class="d-none">IG</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 連結 -->
+                    <div class="col">
+                        <h3 class="h4">連結</h3>
+                        <hr class="col-8 pb-2">
+                        <ul class="list-unstyled row row-cols-2 g-3">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#information" title="前往 相關資訊">公告資訊</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="spot-list.html" title="前往 景點一覽">景點一覽</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tourist-hotspots" title="前往 山海熱點">山海熱點</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#apply" title="前往 線上申請">線上申請</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about" title="前往 關於我們">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" class="nav-link">
+                                    <span>會員登入</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 公司資訊 -->
+                    <div class="col">
+                        <h3 class="h5">聯絡資訊</h3>
+                        <hr class="col-8 pb-2">
+                        <ul class="list-unstyled lh-lg">
+                            <li><span>客服專線:</span>+886 926-222-666</li>
+                            <li><span>電子信箱:</span>a12@gmail.com.tw</li>
+                            <li><span>營業時間:</span>周一至周五10:00 ~ 17:30</li>
+                            <li><span>店休時間:</span>周休六日、國慶假日公休</li>
+                            <li><span>地址:</span><a href="https://maps.app.goo.gl/7GhuuH9ocVZsEXmx7"
+                                    title="前往Google Map[另開視窗]">台南市中西區友愛街16號</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 版權申告 -->
+            <hr class="mb-0">
+            <div class="py-3 text-center foot-bottom">
+                <small> &copy; 2025 莉艾特山海漫遊
+                    <span class="px-2 d-lg-inine-block d-none">|</span><br class="d-lg-none d-block">
+                    此網頁為排版所用，無商業用途
+                    <span class="px-2 d-lg-inine-block d-none">|</span><br class="d-lg-none d-block">
+                    文字圖片來源，若有侵權，請<a href="a12@gmail.com.tw" class="text-light" title="email"></a>來信告知
+                </small>
+            </div>
+        </div>
+    </footer>
+    <!-- 登入表單 -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">莉艾特會員登入</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post" class="was-validated">
+                    <div class="modal-body p-3">
+                        <!-- Member-login -->
+                        <div class="">
+                            <label for="memberIDLogin" class="form-label">會員帳號</label>
+                            <input type="text" class="form-control" id="memberIDLogin"
+                                aria-describedby="memberIDLoginFeedback" placeholder="請輸入會員帳號" required>
+                            <div class="valid-feedback">
+                                *會員輸入正確
+                            </div>
+                            <div id="memberIDLoginFeedback" class="invalid-feedback">
+                                *會員不得為空白
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="">
+                            <label for="memberPS" class="form-label">會員密碼</label>
+                            <input type="password" class="form-control" id="memberPS"
+                                aria-describedby="memberPSFeedback" placeholder="請輸入六位數密碼" required>
+                            <div class="valid-feedback">
+                                *密碼輸入正確
+                            </div>
+                            <div id="memberPSFeedback" class="invalid-feedback">
+                                *密碼不得為空白
+                            </div>
+                        </div>
+                        <!-- check box -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-bk2" for="flexCheckDefault">
+                                是否要記住密碼
+                            </label>
+                        </div>
+                        <!-- Google-login -->
+                        <div class="d-flex align-items-center">
+                            <hr class="col-5"><span class="px-3">or</span>
+                            <hr class="col-5">
+                        </div>
+                        <div class="border p-2">
+                            <a href="#" class="btn btn-secondary d-flex align-items-center justify-content-center"
+                                target="_blank" title="Google帳號登入">
+                                <div class="col-1 me-2 align-items-center">
+                                    <img src="img/logo-google.svg" alt="Google-Logo">
+                                </div>
+                                <span class="text-light">Google帳號登入</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 按鈕 -->
+                    <div class="modal-footer">
+                        <!-- 彈跳視窗 -->
+                        <button type="submit" class="btn btn-pink text-light" id="liveToastBtn">登入</button>
+                        <button type="submit" class="btn btn-secondary">
+                            <a class="text-bk1" href="signup.html">會員註冊</a>
+                        </button>
+                    </div>
+                    <!-- 彈跳視窗 -->
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3 top-50 start-50 translate-middle">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="img/logo_md.svg" class="rounded me-2" alt="莉艾特山海漫遊商標">
+                                <strong class="me-auto">莉艾特山海漫遊</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                登入成功！
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="bs-533/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/WOW-master/dist/wow.min.js"></script>
+    <script src="js/LineProgressbar-master/jquery.lineProgressbar.js"></script>
+    <script src="js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- 輪播圖 -->
+    <script src="js/ui-main/dist/fancybox/fancybox.umd.js"></script>
+    <!-- music -->
+    <script>
+        function playMusic() {
+            var music = document.getElementById('background-music');
+            var playIcon = document.getElementById('playIcon');
+            var stopIcon = document.getElementById('stopIcon');
+
+            if (music.paused) {
+                music.play().catch(function (error) {
+                    console.log("音樂自動播放被瀏覽器阻擋", error);
+                });
+                playIcon.style.display = 'none';
+                stopIcon.style.display = 'inline';
+            } else {
+                music.pause();
+                playIcon.style.display = 'inline';
+                stopIcon.style.display = 'none';
+            }
+        }
+    </script>
+    <!-- mousewheel -->
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            loop: false,
+            nav: true,   // 隱藏「上一張 / 下一張」按鈕
+            dots: false,  // 隱藏下方指示點
+            margin: 10,
+            autoHeight: true, // 讓高度根據內容調整
+            navText: [
+                '<i class="bi bi-arrow-left-circle text-bk1 fs-2"></i>',  // 左箭頭
+                '<i class="bi bi-arrow-right-circle text-bk1 fs-2"></i>'  // 右箭頭
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                },
+            }
+        });
+        // 監聽滑鼠滾輪事件
+        owl.on('wheel', function (e) {
+            e.preventDefault();
+
+            var currentIndex = owl.find('.active').first().index(); // 取得當前可見的第一張索引
+            var itemCount = owl.find('.owl-item').length; // 總圖片數量
+
+            if (e.originalEvent.deltaY > 0) {
+                // 向右滾動（但不超過第五張）
+                if (currentIndex + 5 < itemCount) {
+                    owl.trigger('next.owl.carousel');
+                }
+            } else {
+                // 向左滾動（但不小於第一張）
+                if (currentIndex > 0) {
+                    owl.trigger('prev.owl.carousel');
+                }
+            }
+        });  
+    </script>
+    <!-- toost -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 取得 Toast 按鈕
+            const toastTrigger = document.getElementById("liveToastBtn");
+            // 取得 Toast 元素
+            const toastLive = document.getElementById("liveToast");
+
+            if (toastTrigger) {
+                toastTrigger.addEventListener("click", function () {
+                    // 初始化 Bootstrap Toast
+                    const toast = new bootstrap.Toast(toastLive);
+                    toast.show(); // 顯示 Toast
+                });
+            }
+        });
+    </script>
+    <!-- 景點按鈕視窗 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'hover'
+                });
+            });
+            popoverTriggerList.forEach(function (popoverTriggerEl) {
+                popoverTriggerEl.addEventListener('inserted.bs.popover', function () {
+                    var popoverHeaders = document.querySelectorAll('.popover-header');
+                    popoverHeaders.forEach(function (popoverHeader) {
+                        popoverHeader.style.backgroundColor = '#332921cb';
+                        popoverHeader.style.color = '#ffffff';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
