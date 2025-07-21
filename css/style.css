@@ -1,0 +1,599 @@
+body {
+    font-family: "微軟正黑體", sans-serif;
+    overflow-x: hidden;
+}
+
+.toplink {
+    text-decoration: none;
+    /* 去除底線 */
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+img,
+iframe {
+    width: 100%;
+}
+.pb-15{
+    padding-bottom: 15rem!important;
+}
+/* 色彩 */
+.bg-logo-beige{
+    background-color: #FFF4E7!important;
+}
+.bg-logo-pink{
+    background-color: #BA8A8A;
+}
+.text-bk {
+    color: #1d1c0c;
+}
+
+.text-bk1 {
+    color: #424129f1;
+}
+
+.text-bk2 {
+    color: #3c7753f1 !important;
+}
+
+.text-wh {
+    color: #eee892;
+}
+
+.text-wh-1 {
+    color: #f5f1ba;
+}
+
+.text-rd {
+    color: #d45039;
+}
+
+.text-yw {
+    color: #d4ca39;
+}
+
+.text-gr {
+    color: #609e53;
+}
+
+.text-pr {
+    color: #be71f1;
+}
+
+.text-brown {
+    color: #3e3f31c2;
+}
+
+.text-sp {
+    color: #d5ddf5c5;
+}
+
+.text-blue {
+    color: #8294cec5;
+}
+
+.bg-pink {
+    background-color: #1d1c0c;
+}
+
+.bg-li {
+    background-color: rgba(237, 241, 181, 0.589);
+}
+
+.bg-ligr {
+    background-color: #FFEDDF;
+}
+
+.bg-gr {
+    background-color: #c5f07591;
+}
+
+.bg-green {
+    background-color: #d0f197;
+}
+
+.bg-bl {
+    background-color: #332921cb
+}
+
+.bg-blue {
+    background-color: #cfd6fc;
+}
+
+.bg-bk2 {
+    background-color: #6c6d699c;
+}
+
+/* .bg-blue {
+    background-color: #AFE0CE;
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    background-blend-mode: multiply;
+} */
+.btn-gr {
+    background-color: rgba(80, 241, 188, 0.849);
+}
+
+.btn-bk {
+    background-color: #e0f8b7f1;
+}
+
+.btn-gr-1 {
+    background-color: #9fe670de;
+    color: #08112c;
+}
+
+.btn-red {
+    background-color: #3f91aade;
+}
+
+.btn-brown {
+    background-color: #99b36af1;
+}
+
+.btn-pink {
+    background-color: #BA8A8A;
+}
+
+.btn-yellow {
+    background-color: #FFF4E7;
+}
+
+.btn-bkl {
+    background-color: #545551be;
+}
+
+.btn-bkw {
+    background-color: #666863d7;
+}
+
+.btn-bkl:hover,
+.btn-bkw:hover {
+    background-color: #666863d7 !important;
+    color: #303544;
+}
+
+.btn-pink:hover,
+.btn-bkw:hover {
+    background-color: #ba8a8ac1;
+    /* color: #f6cc80; */
+}
+
+.btn-brown:hover,
+.btn-bk:hover {
+    background-color: #99b36af1 !important;
+    color: #e8f3ea;
+}
+
+.border-gr {
+    border-color: aquamarine;
+}
+
+.border-brown {
+    border-color: #36436881 !important;
+}
+
+.border-li {
+    border-color: #b4b696 !important;
+}
+
+/* ------------------------------------ */
+.py-8 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.py-7 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.fs-10 {
+    font-size: 0.625rem;
+}
+
+[lang="en jp fr"]p {
+    text-align: left;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+/* 移除最後一個 li 的底線 */
+ul .border-bottom li:not(:last-child) {
+    border-bottom: 2px solid #696964;
+}
+
+/* --------------------------------------- */
+/* 下拉式選單 */
+.navbar-toggler {
+    border: 0;
+}
+
+.lang-menu .dropdown-toggle::after {
+    display: none;
+}
+
+.lang-menu .dropdown-menu {
+    min-width: auto;
+}
+
+.lang-menu .dropdown-menu li.border-bottom:last-of-type {
+    border: 0 !important;
+}
+
+/* nav */
+.navbar-collapse {
+    flex-grow: 2 !important;
+    align-items: center;
+}
+
+.cart-btn span {
+    bottom: 0.3rem;
+}
+
+#info .card-text p {
+    text-align: justify;
+}
+
+#information p:not(h2+p) {
+    text-align: justify;
+}
+
+#information li {
+    line-height: 1.7;
+}
+
+.img-box {
+    height: 236px;
+}
+
+/* 滑動動態圖 */
+#about.bg-img {
+    background-attachment: fixed;
+}
+
+#for-realname {
+    box-shadow: 0 0 5px rgba(187, 156, 111, 0.849)
+}
+
+#for-tel {
+    box-shadow: 0 0 5px rgba(187, 156, 111, 0.849)
+}
+
+#for-email {
+    box-shadow: 0 0 5px rgba(187, 156, 111, 0.849)
+}
+
+#for-comments {
+    resize: none;
+    height: 150px;
+    box-shadow: 0 0 5px rgba(187, 156, 111, 0.849)
+}
+
+.map iframe {
+    height: 500px;
+}
+
+.social-icon li:last-of-type,
+.filter-btn li:last-of-type {
+    margin-right: 0;
+}
+
+.z-100 {
+    z-index: -100;
+    /* 藏匿圖層 ，因最新的無障礙不能d-none*/
+}
+
+#about .container>div.position-absolute .logo-s {
+    width: 120px;
+}
+
+#about .container>div.position-absolute {
+    /* top: -200px; */
+    top: calc(-7rem - 60px)
+        /* 7rem減 Logo size並除於2 */
+}
+
+/* 輪播圖按鈕 */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    /* 讓文字區塊置中 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 水平 & 垂直置中 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* 讓文字區塊不會太窄 */
+    text-align: center;
+}
+
+.carousel-caption h2 {
+    font-size: 5.5rem;
+    /* 增大標題 */
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    /* 增大副標 */
+    color: rgb(252, 251, 218);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #f1fc5fd7;
+    width: 30px;
+}
+
+#cart-list-form th:not(th:last-of-type):not(th:first-of-type) {
+    border-right: 2px solid #575f74
+}
+
+.plus-btn i,
+.dash-btn i {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 0.8rem;
+}
+
+#cart-list-form table {
+    --bs-table-bg: transparent !important;
+}
+
+.percentCount {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #4c7742;
+    margin-top: 0.5rem;
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+/* add */
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(158, 158, 158);
+    font-size: 4vw;
+    /* 使用相對大小，適應不同螢幕 */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    /* 避免換行 */
+}
+
+.header-banner {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    /* 避免內容超出 */
+}
+
+/* list */
+.filter-box .card-body {
+    opacity: 0;
+    transition: all.3s;
+}
+
+.filter-box .col:hover .card-body {
+    opacity: 1;
+    top: 3.5 rem !important;
+    right: 3.5 rem !important;
+    bottom: 3.5 rem !important;
+    left: 3.5 rem !important;
+    border-radius: 3rem;
+}
+
+.btn.active {
+    color: #f0f8f4;
+    background-color: #7caa5ddc;
+    border-color: #c3d2f8;
+}
+
+.filter-item {
+    cursor: pointer;
+    /* 讓滑鼠變成點擊狀態 */
+    border-radius: 5px;
+}
+
+/* 山海熱點 */
+#tourist-hotspots {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 215px;
+    /* 確保 trapezoid 左側有空間 */
+    padding-right: 80px;
+}
+
+.box {
+    position: absolute;
+    /* 使用絕對定位 */
+    top: 160px;
+    left: 215px;
+    /* 向右移動 10cm (377px) */
+    width: calc(100% - 377px);
+    /* 根據新的 left 計算寬度 */
+    overflow-x: hidden;
+    /* 隱藏橫向溢出的部分 */
+}
+
+.card {
+    min-height: 250px;
+    /* 限制最小高度 */
+    max-height: 400px;
+    /* 限制最大高度 */
+}
+
+.card-img-top {
+    height: 200px;
+    /* 固定圖片高度 */
+    object-fit: cover;
+    /* 防止變形 */
+}
+#tourguide .card {
+    height: 400px; /* 限制高度 */
+}
+
+#tourguide .card-body {
+    padding: 15px; /* 減少內邊距，讓卡片變小 */
+}
+
+.img-bg {
+    position: relative;
+    /* 確保遮罩可正確定位 */
+}
+
+.img-bg::after {
+    content: "";
+    /* 生成遮罩 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色 */
+}
+
+.smtrapezoid {
+    display: none;
+    /* 預設隱藏 */
+}
+
+.trapezoid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 320px;
+    background-color: #82a9f3a8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: rgb(224, 253, 248);
+    clip-path: polygon(0 0, 100% 0, 74% 100%, 0% 100%);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.owl-nav button {
+    background: none !important;  /* 移除背景色 */
+    border: none !important;      /* 移除邊框 */
+    box-shadow: none !important;  /* 移除陰影 */
+    padding: 0 !important;        /* 移除內邊距 */
+    outline: none !important;     /* 移除點擊時的外框 */
+}
+
+.owl-nav button i {
+    background: none !important;  /* 確保 <i> 內沒有背景色 */
+    border-radius: 50%;           /* 如果是圓形按鈕，保留圓角 */
+}
+
+
+/* modal */
+/* 讓表單邊框維持預設顏色 */
+.form-control:valid,
+.form-control:invalid {
+    border-color: #ced4da !important;
+    /* Bootstrap 預設邊框顏色 */
+    box-shadow: none !important;
+    /* 移除陰影效果 */
+}
+
+/* 自訂成功與錯誤訊息的顏色 */
+.valid-feedback {
+    color: green !important;
+    /* 文字顏色改為綠色 */
+}
+
+.invalid-feedback {
+    color: red !important;
+    /* 文字顏色改為紅色 */
+}
+
+.card-img-top {
+    width: 100%;
+    /* 確保圖片寬度一致 */
+    height: 230px;
+    /* 統一高度，可依需求調整 */
+    object-fit: cover;
+    /* 確保圖片填滿，不變形但可能裁切 */
+}
+
+/*spot list */
+.btn-secondary {
+    --bs-btn-color: #fcfcfc;
+    --bs-btn-bg: #6c757db2 !important;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-border-color: none;
+}
+/* MENU */
+.navbar-nav {
+    border: none; /* 移除外框邊框 */
+}
+.br-list {
+    color: #31312e;
+    text-decoration: none;
+    background-color: #fff4e7e0;
+    border-bottom: 0.5px solid #f1efe88a
+}
+
+.mymb {
+    margin-bottom: 20px; /* 每個區塊之間增加底部間距 */
+}
+
+/* 景點一覽分類按鈕 */
+.btn-custom {
+    background-color: transparent;
+    color: #BA8A8A;
+    padding: 10px 20px;
+    border: 2px solid #BA8A8A;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: #BA8A8A;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.btn-custom.active {
+    background-color: #BA8A8A;
+    color: #ffffff;
+    transform: none;
+    transition: none;
+}
+
+/* 輪播圖文字辨識度調整 */
+.carousel-caption h5, .carousel-caption p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h5, .carousel-caption p {
+    font-weight: bold; 
+}

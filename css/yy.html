@@ -1,0 +1,152 @@
+<!-- 老師改版 unlike -->
+<nav class="navbar navbar-expand-xl shadow-sm position-sticky top-0 z-3 bg-blue">
+    <div class="container">
+        <!-- LOGO -->
+        <h1 class="navbar-brand col-xl-3 col-lg-9 col-md-8 px-xl-3 me-0 mb-0">
+            <a class="navbar-brand  me-0" href="index.html" title="前往首頁">
+                <!-- 平板以上 -->
+                <img class="d-md-inline-block d-none" src="img/logo_rename.png" alt="莉艾特山海漫遊 Logo">
+                <!-- 手機板 -->
+                <img class="d-md-none d-inline-block" src="img/logo_md.svg" alt="莉艾特山海漫遊 Logo">
+                <span class="d-none">莉艾特山海漫遊</span> <!--xl 1200以上--->
+            </a>
+        </h1>
+        <!-- 漢堡選單 -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+            aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 連結 -->
+        <div class="collapse navbar-collapse flex-fill justify-content-center" id="main-menu">
+            <ul class="navbar-nav mb-2 mb-lg-0  top-0  start-0 end-0 bottom-0 z-3 justify-content-between col-10">
+                <li class="nav-item">
+                    <a class="nav-link " href="about" title="前往 關於我們">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="spot-list" title="前往 景點一覽">景點一覽</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tour-guide" title="前往 山海漫遊">山海漫遊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience" title="前往 旅遊體驗">旅遊體驗</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#information" title="前往 相關資訊">相關資訊</a>
+                </li>
+                <!-- 會員 (僅手機和平板顯示) -->
+                <li class="nav-item d-xl-none">
+                    <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        class="nav-link">
+                        <i class="bi bi-person-heart"></i>
+                        <span>會員登入</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 會員(僅電腦版顯示) -->
+        <div class="d-none d-xl-flex align-items-center ms-auto text-decoration-none text-gr">
+            <i class="bi bi-person-heart"></i>
+            <a href="javascript:;" title="點擊會員登入" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="d-md-inline-block d-none text-gr">會員登入</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    function openMenu() {
+        document.querySelector(".top_menu_rwd").style.transform = "translateX(0)";
+    }
+
+    function closeMenu() {
+        document.querySelector(".top_menu_rwd").style.transform = "translateX(-100%)";
+    }
+</script>
+
+<!-- menu 左至右滑動 -->
+<style>
+    .top_menu_rwd {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+</style>
+
+ <!-- 手機版申請 -->
+ <article id="apply" class="py-7">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 g-5">
+            <!-- 快速申請 -->
+            <div class="col wow bounceInRight">
+                <!-- 區塊標題/訊息公告 -->
+                <div class="text-center section-title mb-5">
+                    <h2>快速申請</h2>
+                </div>
+                <!-- news -->
+                <div class="list-group">
+                    <div class="">
+                        <a href="#" class="list-group-item list-group-item-action border-0 border-bottom">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="img/tourist.png" class="col-2 me-3" alt="點擊解說導覽">
+                                <h6 class="mb-0">解說導覽</h6>
+                                <i class="btn bi bi-arrow-right-circle fs-4 ms-3"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="#" class="list-group-item list-group-item-action border-0 border-bottom">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="img/backpack.png" class="col-2 me-3" alt="點擊解說導覽">
+                                <h6 class="mb-0">山屋營地</h6>
+                                <i class="btn bi bi-arrow-right-circle fs-4 ms-3"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="#" class="list-group-item list-group-item-action border-0 border-bottom">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="img/directional-sign.png" class="col-2 me-3" alt="點擊解說導覽">
+                                <h6 class="mb-0">潛水體驗</h6>
+                                <i class="btn bi bi-arrow-right-circle fs-4 ms-3"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- 按鈕訊息 -->
+<a tabindex="0" class="btn btn-lg btn-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+    data-bs-title="Dismissible popover"
+    data-bs-content="站在月台上，可俯瞰湛藍的太平洋，欣賞火車行駛在山海之間的夢幻畫面，被譽為「全台最美車站」">景點資訊</a>
+<!-- 彈跳視窗 -->
+<button type="button" class="btn btn-primary" id="liveToastBtn">登入</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3 top-50 start-50 translate-middle">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="img/logo_md.svg" class="rounded me-2" alt="莉艾特山海漫遊商標">
+            <strong class="me-auto">莉艾特山海漫遊</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            登入成功！
+        </div>
+    </div>
+</div>
+
+
+<Script>
+    const popover = new bootstrap.Popover('.popover-dismiss', {
+        trigger: 'focus'
+    })
+</Script>

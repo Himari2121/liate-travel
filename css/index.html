@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木由子樂行</title>
+    <!-- icon -->
+    <link rel="icon" href="image/icon.svg">
+    <!-- css -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/icons-1.11.3/font/bootstrap-icons.min.css">
+    <!-- 頁面動態 -->
+    <link rel="stylesheet" href="js/WOW-master/css/libs/animate.css">
+    <!-- 進度條 -->
+    <link rel="stylesheet" href="js/LineProgressbar-master/jquery.lineProgressbar.css">
+    <!-- 燈箱 -->
+    <link rel="stylesheet" href="js/ui-main/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="bg-light py-1 border-bottom border-1">
+        <div class="container">
+            <!-- 聯絡資訊、語系、會員、購物車 -->
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- 聯絡資訊 -->
+                <div>
+                    <ul class="list-unstyled d-flex mb-0">
+                        <!-- 信箱 -->
+                        <li class="me-3">
+                            <a class="text-brown" href="mailto:muyuzu@abc.com.tw" title="聯絡信箱:muyuzu@abc.com.tw">
+                                <i class="bi bi-envelope"></i>
+                                <span class="d-md-inline-block d-none">muyuzu@abc.com.tw</span>
+                            </a>
+                        </li>
+                        <!-- 電話 -->
+                        <li>
+                            <a class="text-brown" href="tel:+886333333333" title="客服專線">
+                                <i class="bi bi-phone"></i>
+                                <span class="d-md-inline-block d-none">+886 333-333-333</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 語系、會員、購物車 -->
+                <div class="d-flex me-sm-0 me-3">
+                    <!-- 語系 -->
+                    <div class="dropdown lang-menu">
+                        <button class="btn dropdown-toggle p-0 text-brown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-globe"></i>
+                            <span class="d-none">語系轉換按鈕</span>
+                        </button>
+                        <ul class="dropdown-menu text-center w-auto">
+                            <li class="border-bottom"><a class="dropdown-item" href="#" title="繁體中文">繁</a></li>
+                            <li class="border-bottom"><a class="dropdown-item" href="#" title="簡體中文">簡</a></li>
+                            <li class="border-bottom"><a class="dropdown-item" href="#" title="英語">英</a></li>
+                        </ul>
+                    </div>
+                    <span class="px-3 text-info-emphasis">|</span>
+                    <!-- 會員 -->
+                    <div>
+                        <a class="text-brown" href="javascript:;" title="點擊登入">
+                            <i class="bi bi-person"></i>
+                            <span class="d-md-inline-block d-none" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">登入</span>
+                        </a>
+                    </div>
+                    <span class="px-3 text-info-emphasis">|</span>
+                    <!-- 購物車 -->
+                    <div class="cart-bth">
+                        <a class="text-brown" href="cart-list.html" title="前往 購物車" class="position-relative">
+                            <i class="bi bi-cart4"></i>
+                            <span class="small bg-danger text-white rounded-pill p-1 fs-10 fw-bolder">+99</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主選單 -->
+    <nav class="navbar navbar-expand-xl shadow-sm">
+        <div class="container">
+            <h1 class="mb-0 col-2">
+                <a class="navbar-brand col-11 me-0" href="index.html" title="回 首頁">
+                    <img class="d-md-inline-block d-none" src="image/logo.png" alt="木由子樂行商標">
+                    <span class="d-md-none d-inline-block">木由子樂行</span> <!-- xl 1200以上 -->
+                </a>
+            </h1>
+            <!-- 平板、手機 -->
+            <div class="search-bth d-lg-none d-inline-block ms-auto">
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#search-area"
+                    aria-expanded="false" aria-controls="search-area">
+                    <i class="bi bi-search"></i>
+                    <span class="d-none position-absolute">搜尋按鈕</span>
+                </button>
+            </div>
+            <!-- 漢堡 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <!-- 連結 -->
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="navbar-nav mb-2 mb-lg-0 top-0 start-0 end-0 bottom-0 z-3 d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" title="前往 關於我們">關於我們</a> <!-- #前往此頁面中的位置 -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service" title="前往 服務項目">服務項目</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html" title="前往 各類商品">各類商品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-product" title="前往 最新商品">最新商品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sale.html" title="前往 促銷活動">促銷活動</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info" title="前往 相關資訊">相關資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news-letter" title="前往 訂閱">訂閱</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" title="前往 聯絡我們">聯絡我們</a>
+                    </li>
+                    <!-- 電腦版 -->
+                    <li class="nav-item d-lg-block d-none">
+                        <div class="search-bth">
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#search-area"
+                                aria-expanded="false" aria-controls="search-area">
+                                <i class="bi bi-search"></i>
+                                <span class="d-none">搜尋按鈕</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 搜尋表單 -->
+    <div class="container col-xl-10">
+        <div class="collapse" id="search-area">
+            <div class="card card-body border-0 bg-transparent">
+                <form action="#" method="get">
+                    <div class="form-floating">
+                        <input type="search" class="form-control bg-light border-0" id="for-search" placeholder="搜尋商品">
+                        <label for="for-search">搜尋商品</label>
+                    </div>
+                    <button type="submit" class="d-none">送出</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 行銷圖 -->
+    <header>
+        <div id="banner-slide" class="carousel slide">
+            <!-- 點 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <!-- 圖 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/banner_1.jpg" class="d-block w-100" alt="banner_1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner_2.jpg" class="d-block w-100" alt="banner_2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner_3.jpg " class="d-block w-100" alt="banner_3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 箭頭 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#banner-slide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#banner-slide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <!-- 主要內容 -->
+    <main>
+        <!-- 關於 -->
+        <article id="about" class="py-7">
+            <div class="container">
+                <div class="d-flex align-items-center flex-lg-row flex-column">
+                    <div class="col-lg-5 col-12 mb-lg-0 mb-4"> <!-- 相加要等於12 -->
+                        <!-- 區塊標題 -->
+                        <div class="text-center section-title mb-5">
+                            <h2>關於我們</h2>
+                            <p>專注於吉他與相關周邊產品的專業樂器行</p>
+                        </div>
+                        <!-- 進度條 -->
+                        <dl>
+                            <dt>品質</dt>
+                            <dd id="about-1"></dd>
+                            <dt>創新</dt>
+                            <dd id="about-2"></dd>
+                            <dt>技術</dt>
+                            <dd id="about-3"></dd>
+                            <dt>服務</dt>
+                            <dd id="about-4"></dd>
+                            <dt>價錢</dt>
+                            <dd id="about-5"></dd>
+                        </dl>
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="card border-0 rounded-0">
+                                    <img src="image/about_icon_1.png" class="col-4" alt="關於圖標">
+                                    <div class="card-body">
+                                        <h5 class="card-title h4 fw-bold">音樂夢想的起點</h5>
+                                        <p class="card-text fs-5">音樂旅程的第一站，無論是樂器選購還是技術學習，都能在這裡找到啟發與支持。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 rounded-0">
+                                    <img src="image/about_icon_1.png" class="col-4" alt="關於圖標">
+                                    <div class="card-body">
+                                        <h5 class="card-title h4 fw-bold">專注於音樂的純粹</h5>
+                                        <p class="card-text fs-5">木由子樂行以提供高品質的吉他與周邊產品為使命，讓每位音樂愛好者享受純粹的音樂體驗。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 rounded-0">
+                                    <img src="image/about_icon_1.png" class="col-4" alt="關於圖標">
+                                    <div class="card-body">
+                                        <h5 class="card-title h4 fw-bold">專業與熱忱的結合</h5>
+                                        <p class="card-text fs-5">提供專業的樂器維修服務與貼心的客製化建議，讓每件樂器煥發新生。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 rounded-0">
+                                    <img src="image/about_icon_1.png" class="col-4" alt="關於圖標">
+                                    <div class="card-body">
+                                        <h5 class="card-title h4 fw-bold">社群與成長的家園</h5>
+                                        <p class="card-text fs-5">這裡不僅是一家樂器行，更是音樂愛好者的交流平台，共同學習、分享與成長，探索音樂的無限可能。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 服務 -->
+        <article id="service" class="py-7 bg-light">
+            <div class="container">
+                <!-- 區塊標題 -->
+                <div class="text-center section-title mb-5">
+                    <h2>服務項目</h2>
+                    <p>讓我們成為你音樂旅程中最可靠的夥伴！</p>
+                </div>
+                <!-- 內容 -->
+                <div class="d-flex align-items-center flex-lg-row flex-column">
+                    <div class="col-lg-5 col-12 mb-lg-0 mb-4">
+                        <div class="card mb-3 border-0 bg-transparent rounded-0">
+                            <div class="row g-0 align-items-center justify-content-center">
+                                <div class="col-md-2 col-4">
+                                    <img src="image/about_icon_3.png" class="img-fluid" alt="服務圖標">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5 fw-bold text-orange">樂器維修與保養</h3>
+                                        <p class="card-text lh-lg">專業提供吉他的調音、換弦、保養與小修服務，延長樂器壽命。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border-0 bg-transparent rounded-0">
+                            <div class="row g-0 align-items-center justify-content-center">
+                                <div class="col-md-2 col-4">
+                                    <img src="image/about_icon_2.png" class="img-fluid" alt="服務圖標">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5 fw-bold text-orange">吉他課程</h3>
+                                        <p class="card-text lh-lg">從基礎到進階的彈奏教學課程，適合各年齡層與程度的學員。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border-0 bg-transparent rounded-0">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="image/service_icon.png" class="img-fluid" alt="服務圖標">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5 fw-bold text-orange">線上訂購與配送</h3>
+                                        <p class="card-text lh-lg">提供線上選購與快速配送服務，方便顧客隨時購物。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="card text-bg-dark">
+                            <img src="image/banner_1.jpg" class="card-img" alt="影片封面">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <a data-fancybox href="https://youtu.be/qLrzh8pSzjM?si=QRSFDRkuudDSJ2lq"
+                                    title="點擊觀看影片[另開視窗]">
+                                    <i class="bi bi-play-circle-fill display-6 text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 最新商品 -->
+        <article id="new-product" class="py-7">
+            <div class="container">
+                <!-- 區塊標題 -->
+                <div class="text-center section-title mb-5">
+                    <h2>最新商品</h2>
+                    <p>讓我們成為你音樂旅程中最可靠的夥伴！</p>
+                </div>
+                <!-- 商品列 -->
+                <div class="row row-cols-1 row-cols-md-3 row-cols-xxl-4 g-md-4 g-2">
+                    <div class="col wow bounceInLeft" data-wow-delay="0.1s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <span
+                                    class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span>
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="0.5s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <!-- <span class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span> -->
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="0.75s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <!-- <span class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span> -->
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="1s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <span
+                                    class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span>
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="1.5s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <span
+                                    class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span>
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="1.75s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <span
+                                    class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">hot</span>
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="2s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <!-- <span class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span> -->
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col wow bounceInLeft" data-wow-delay="2.5s">
+                        <div class="card h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="image/product1.jpg" class="card-img-top" alt="商品圖">
+                                <!-- <span class="position-absolute top-0 end-0 bg-warning px-3 py-1 mt-1 me-2 rounded-pill text-uppercase">sale</span> -->
+                                <!-- 收藏、加入購物車、商品詳情頁 -->
+                                <ul class="list-unstyled d-flex align-items-center 
+                                justify-content-between position-absolute start-0 end-0 
+                                mt-3 ms-3 me-3 bg-light bg-opacity-75
+                                rounded-start-pill rounded-end-pill">
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊加入我的最愛商品" class="text-orange fs-5">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <span class="d-none">我的最愛商品</span>
+                                        </a>
+                                    </li>
+                                    <li class="border-start border-end border-light py-3 col-7 text-center">
+                                        <a href="#" title="點擊加入購物車" class="text-orange fs-5">
+                                            <i class="bi bi-cart-plus-fill"></i>
+                                            <span class="d-none">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="col text-center">
+                                        <a href="javascript:;" title="點擊前往商品說明頁" class="text-orange fs-5">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                            <span class="d-none">商品說明頁</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="card-title h6">雲杉木 面單板吉他 九五折 </h3>
+                                <div class="card-text fst-italic">
+                                    <span class="sale fs-4 px-2">11999</span>
+                                    <del>15000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 連結 -->
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-warning text-white px-5 rounded-pill" title="前往最新商品列表">
+                        <span>更多</span>
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <!-- 相關資訊 -->
+        <article id="info" class="py-7 bg-light">
+            <div class="container">
+                <!-- 區塊標題 -->
+                <div class="text-center section-title mb-5">
+                    <h2>相關資訊</h2>
+                    <p>讓我們成為你音樂旅程中最可靠的夥伴！</p>
+                </div>
+                <!-- 內容 -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 bg-transparent">
+                            <div class="overflow-hidden img-box">
+                                <img src="image/banner_2.jpg" class="card-img-top object-fit-cover h-100" alt="吉他種類差異"
+                                    title="圖片來源">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5 ">
+                                    <a class="text-brown" href="https://www.syanchingmusic.com/article2_detail_59.htm"
+                                        title="吉他種類有哪些?[另開視窗]" target="_blank">
+                                        <span>吉他種類有哪些?</span>
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </h3>
+                                <ul class="list-unstyled d-flex align-items-lg-center small flex-lg-row flex-column">
+                                    <!-- 日期 -->
+                                    <li class="text-dark">
+                                        <i class="bi bi-calendar-fill text-orange"></i>
+                                        <span class="ms-1">2025/01/01</span>
+                                    </li>
+                                    <li class="px-2 d-lg-block d-none">|</li>
+                                    <!-- 官網 -->
+                                    <li>
+                                        <a class="text-dark"
+                                            href="https://www.syanchingmusic.com/article2_detail_59.htm"
+                                            title="前往吉他種類有哪些?文章分享[另開視窗]">
+                                            <i class="bi bi-house-door-fill text-orange"></i>
+                                            <span>民謠、古典、電吉他?</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <p>吉他種類中最容易搞混的就是木吉他，木吉他指的是市面上所有的空心吉他
+                                        其中最常見的是民謠吉他、古典吉他，
+                                        而將空心吉他裝上拾音器後，具備擴音與調整音色功能，可做舞台演出，也稱電木吉他
+                                        本篇將對弦琴音樂顧客最常搞混的樂器做介紹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 bg-transparent">
+                            <div class="overflow-hidden img-box">
+                                <img src="image/banner_2.jpg" class="card-img-top object-fit-cover h-100" alt="吉他種類差異"
+                                    title="圖片來源">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a class="text-brown" href="https://www.syanchingmusic.com/article2_detail_59.htm"
+                                        title="吉他種類有哪些?[另開視窗]" target="_blank">
+                                        <span>吉他種類有哪些?</span>
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </h3>
+                                <ul class="list-unstyled d-flex align-items-center small">
+                                    <!-- 日期 -->
+                                    <li class="text-dark">
+                                        <i class="bi bi-calendar-fill text-orange"></i>
+                                        <span class="ms-1">2025/01/20</span>
+                                    </li>
+                                    <li class="px-2">|</li>
+                                    <!-- 官網 -->
+                                    <li>
+                                        <a class="text-dark"
+                                            href="https://www.myguitarfriend.com/post/guitar-first-time-buyer"
+                                            title="新手選購指南[另開視窗]">
+                                            <i class="bi bi-house-door-fill text-orange"></i>
+                                            <span>新手吉他選購指南</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>價格與品質</li>
+                                        <li>木吉他桶型</li>
+                                        <li>插電不插電</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 bg-transparent">
+                            <div class="overflow-hidden img-box">
+                                <img src="image/banner_2.jpg" class="card-img-top object-fit-cover h-100" alt="吉他種類差異"
+                                    title="圖片來源">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5 ">
+                                    <a class="text-brown" href="https://www.syanchingmusic.com/article2_detail_59.htm"
+                                        title="吉他種類有哪些?[另開視窗]" target="_blank">
+                                        <span>吉他種類有哪些?</span>
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </h3>
+                                <ul class="list-unstyled d-flex align-items-center small">
+                                    <!-- 日期 -->
+                                    <li class="text-dark">
+                                        <i class="bi bi-calendar-fill text-orange"></i>
+                                        <span class="ms-1">2025/01/01</span>
+                                    </li>
+                                    <li class="px-2">|</li>
+                                    <!-- 官網 -->
+                                    <li>
+                                        <a class="text-dark"
+                                            href="https://www.syanchingmusic.com/article2_detail_59.htm"
+                                            title="前往吉他種類有哪些?文章分享[另開視窗]">
+                                            <i class="bi bi-house-door-fill text-orange"></i>
+                                            <span>民謠、古典、電吉他?</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <p>吉他種類中最容易搞混的就是木吉他，木吉他指的是市面上所有的空心吉他
+                                        其中最常見的是民謠吉他、古典吉他，
+                                        而將空心吉他裝上拾音器後，具備擴音與調整音色功能，可做舞台演出，也稱電木吉他
+                                        本篇將對弦琴音樂顧客最常搞混的樂器做介紹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </article>
+        <!-- 訂閱電子報 -->
+        <article id="news-letter" class="py-7 bg-img" style="background-image: url(image/banner_3.jpg);">
+            <div class="container bg-light bg-opacity-50 py-5 position-relative">
+                <div class="d-flex align-items-center justify-content-between flex-md-row flex-column">
+                    <!-- 區塊標題 -->
+                    <div class="col-xl-3 col-md-5 md-md-0 mb-4">
+                        <div class="text-center section-title">
+                            <h2>訂閱電子報</h2>
+                            <p class="fs-8">讓我們成為你音樂旅程中最可靠的夥伴！</p>
+                        </div>
+                    </div>
+                    <!-- 訂閱表單 -->
+                    <div class="col-md-7 pe-md-4">
+                        <form action="#" method="post">
+                            <div class="input-group mb-3">
+                                <lable for="for news-letter" class="position-absolute z-100">請輸入您的電子信箱</lable>
+                                <input type="email" class="form-control rounded-start-pill" placeholder="請輸入您的電子信箱"
+                                    aria-label="請輸入您的電子信箱" aria-describedby="basic-addon2" id="news-letter">
+                                <!-- <span class="input-group-text" id="basic-addon2">@example.com</span> -->
+                                <button type="submit" class="btn btn-outline-warning rounded-end-pill">訂閱</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="position-absolute start-0">
+                    <div class="col-12 wow swing center">
+                        <img src="image/icon.svg" alt="木由子樂行logo">
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 聯絡 -->
+        <article id="contact" class="py-7">
+            <div class="container">
+                <div class="d-flex align-items-center flex-lg-row flex-column">
+                    <!-- 聯絡表單 -->
+                    <div class="col-lg-5 col-12 mb-lg-0 mb-4">
+                        <div class="text-center section-title mb-5">
+                            <h2>聯絡我們</h2>
+                            <p>專注於吉他與相關周邊產品的專業樂器行</p>
+                        </div>
+                        <!-- 聯絡表單 -->
+                        <form action="#" method="post">
+                            <div class="row g-3">
+                                <!-- 姓名 -->
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text"
+                                            class="form-control border-0 border-bottom border-2 rounded-0" id="for-name"
+                                            placeholder="真實姓名">
+                                        <label for="for-name" class="text-orange">姓名</label>
+                                    </div>
+                                </div>
+                                <!-- 電話 -->
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="tel" class="form-control border-0 border-bottom border-2 rounded-0"
+                                            id="for-tel" placeholder="連絡電話">
+                                        <label for="for-tel" class="text-orange">電話</label>
+                                    </div>
+                                </div>
+                                <!-- 信箱 -->
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="email"
+                                            class="form-control border-0 border-bottom border-2 rounded-0"
+                                            id="for-email" placeholder="常用信箱">
+                                        <label for="for-email" class="text-orange">信箱</label>
+                                    </div>
+                                </div>
+                                <!-- 留言 -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0 border-bottom border-2 rounded-0"
+                                            placeholder="請留言" id="for-comments"></textarea>
+                                        <label for="for-comments" class="text-orange">留言</label>
+                                    </div>
+                                </div>
+                                <!-- 按鈕 -->
+                                <div class="col-12 text-end">
+                                    <button class="btn btn-warning text-light" type="submit">送出</button>
+                                    <button class="btn btn-warning text-light" type="reset">重置</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- 地圖 -->
+                    <div class="col-lg-7 col-12 ps-lg-5 map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14732.39904135814!2d120.29466299668651!3d22.61274958103193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037db47b3687%3A0xfdf3ebd2d39c44c3!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A5Lit5bGx5LqM6LevMTAw6Jmf!5e0!3m2!1szh-TW!2stw!4v1738555237654!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="pt-5 bg-brown text-light">
+        <div class="container">
+            <!-- 社群、連結、聯絡資訊 -->
+            <div class="footer-top">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                    <!-- 社群 -->
+                    <div class="col">
+                        <!-- logo -->
+                        <div class="text-lg-center mb-3">
+                            <a class="col-8" href="index.html" title="首頁">
+                                <img src="image/logo.png" alt="木由子樂行商標">
+                            </a>
+                        </div>
+                        <!-- 社群logo -->
+                        <ul class="list-unstyled d-flex align-items-center justify-content-lg-center social-icon">
+                            <li class="me-3">
+                                <a class="text-light fs-2" href="#" target="_blank" title="前往木由子樂行FB專頁">
+                                    <i class="bi bi-facebook"></i>
+                                    <span class="d-none">FB專頁</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-light fs-2" href="#" target="_blank" title="加入木由子樂行LINE好友">
+                                    <i class="bi bi-line"></i>
+                                    <span class="d-none">加LINE好友</span>
+                                </a>
+                            </li>
+                            <li class="me-3">
+                                <a class="text-light fs-2" href="#" target="_blank" title="前往木由子樂行IG專頁">
+                                    <i class="bi bi-instagram"></i>
+                                    <span class="d-none">IG專頁</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 連結 -->
+                    <div class="col">
+                        <h3 class="h5 border-bottom d-inline-block col-8 pb-2">連結</h3>
+                        <ul class="list-unstyled row-cols-2 g-3 lh-lg">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about" title="前往 關於我們">關於我們</a> <!-- #前往此頁面中的位置 -->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#service" title="前往 服務項目">服務項目</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html" title="前往 各類商品">各類商品</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#new-product" title="前往 最新商品">最新商品</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sale.html" title="前往 促銷活動">促銷活動</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#info" title="前往 相關資訊">相關資訊</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#news-letter" title="前往 訂閱">訂閱</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact" title="前往 聯絡我們">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 聯絡資訊 -->
+                    <div class="col">
+                        <h3 class="h5 h5 border-bottom d-inline-block col-8 pb-2">聯絡資訊</h3>
+                        <ul class="list-unstyled lh-lg">
+                            <li><span>客服專線:</span>+886 333-333-333</li>
+                            <li><span>電子信箱:</span>muyuzu@abc.com.tw</li>
+                            <li>
+                                <span>地址:</span>
+                                <a class="text-light" href="https://maps.app.goo.gl/hrhU8NXpLmp2hnGh8"
+                                    title="前往Google Map[另開新視窗]" target="_blank">802高雄市苓雅區中山二路100號</a>
+                            </li>
+                            <li><span>營業時間:</span>二 - 週日 9am 到 9pm</li>
+                            <li><span>店休時間:</span>週一 及 每月第三週周日</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 版權申告 -->
+            <hr class="mb-0">
+            <div class="py-3 text-center footer-bottom">
+                <small>&copy; 2025 木由子樂行
+                    <span class="px-2">|</span>
+                    此網站為版型設計，無商業用途
+                    <span class="px-2">|</span>
+                    若有侵權，請來信告知，將立即刪除
+                </small>
+            </div>
+        </div>
+        <!-- <div class="bg-light py-3">
+            <div class="container"></div>
+        </div> -->
+    </footer>
+    <!-- 登入表單 -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">木由子樂行會員登入</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body p-3">
+                        <!-- Member-login -->
+                        <div class="">
+                            <label for="memberIDLogin" class="form-label">會員帳號</label>
+                            <input type="text" class="form-control" id="memberIDLogin"
+                                aria-describedby="memberIDLoginFeedback" placeholder="請輸入會員帳號" required>
+                            <div class="valid-feedback">
+                                會員輸入正確
+                            </div>
+                            <div id="memberIDLoginFeedback" class="invalid-feedback">
+                                會員不得為空白
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="">
+                            <label for="memberPS" class="form-label">會員密碼</label>
+                            <input type="password" class="form-control" id="memberPS"
+                                aria-describedby="memberPSFeedback" placeholder="請輸入六位數密碼" required>
+                            <div class="valid-feedback">
+                                密碼輸入正確
+                            </div>
+                            <div id="memberPSFeedback" class="invalid-feedback">
+                                密碼不得為空白
+                            </div>
+                        </div>
+                        <!-- 按鈕 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" type="submit">登入</button>
+                            <a class="text-brown" href="sign-up.html" title="前往註冊" class="position-relative">
+                                <button type="button" class="btn btn-secondary">會員註冊</button>
+                            </a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/WOW-master/dist/wow.min.js"></script>
+    <script src="js/LineProgressbar-master/jquery.lineProgressbar.js"></script>
+    <script src="js/ui-main/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        new WOW().init();
+        // 關於
+        $('#about-1').LineProgressbar({
+            percentage: 100,
+            fillBackgroundColor: '#EFB31A',
+            radius: '15px'
+        });
+        $('#about-2').LineProgressbar({
+            percentage: 78,
+            fillBackgroundColor: '#F0B92D',
+            radius: '15px'
+        });
+        $('#about-3').LineProgressbar({
+            percentage: 90,
+            fillBackgroundColor: '#F2BF40',
+            radius: '15px'
+        });
+        $('#about-4').LineProgressbar({
+            percentage: 95,
+            fillBackgroundColor: '#F3C653',
+            radius: '15px'
+        });
+        $('#about-5').LineProgressbar({
+            percentage: 80,
+            fillBackgroundColor: '#F4CC66',
+            radius: '15px'
+        });
+        //--------------------
+        Fancybox.bind("[data-fancybox]", {});
+ 
+    </script>
+
+</body>
+
+</html>
